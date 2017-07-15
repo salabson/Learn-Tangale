@@ -1,5 +1,6 @@
 package com.digitaltouchlab.learntangale;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.GridView;
@@ -13,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int FAMILY = 1;
     private static final int COUNTING = 2;
     private static final int ENQUIRIES = 3;
-    private static final int PHRASES_= 4;
+    private static final int PHRASES= 4;
 
 
     ArrayList<WordCategory> wordCategories;
@@ -47,6 +48,29 @@ public class MainActivity extends AppCompatActivity {
         wordCategories.add(new WordCategory("Enquiries", R.drawable.catagoryimage));
         wordCategories.add(new WordCategory("Phrases", R.drawable.catagoryimage));
 
+    }
+
+    private void loadAcivity(int index) {
+        Intent startActivityIntent = null;
+        switch (index) {
+            case ANIMALS:
+                startActivityIntent = new Intent(this,AnimalsActivity.class);
+                break;
+            case FAMILY:
+                startActivityIntent = new Intent(this,FamilyActivity.class);
+                break;
+            case COUNTING:
+                startActivityIntent = new Intent(this,CountingActivity.class);
+                break;
+            case ENQUIRIES:
+                startActivityIntent = new Intent(this,EnquiriesActivity.class);
+                break;
+            case PHRASES:
+                startActivityIntent = new Intent(this,PhrasesActivity.class);
+                break;
+
+        }
+        startActivity(startActivityIntent);
     }
 
 }
