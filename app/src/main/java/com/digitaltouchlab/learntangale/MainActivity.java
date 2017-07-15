@@ -8,6 +8,14 @@ import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
+    // create constants that represent index various categories in array list
+    private static final int ANIMALS = 0;
+    private static final int FAMILY = 1;
+    private static final int COUNTING = 2;
+    private static final int ENQUIRIES = 3;
+    private static final int PHRASES_= 4;
+
+
     ArrayList<WordCategory> wordCategories;
     GridView categotyGV;
 
