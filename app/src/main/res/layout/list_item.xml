@@ -7,12 +7,12 @@
         android:id="@+id/imageWordCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"/>
+        android:paddingLeft="64dp"
+        android:paddingTop="64dp"/>
     <TextView
         android:id="@+id/wordCategoryDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
+        android:paddingLeft="64dp"
         android:paddingTop="16dp"/>
 </LinearLayout>

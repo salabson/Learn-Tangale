@@ -15,12 +15,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
         // get reference to gridviw from the main layout
         categotyGV = (GridView) findViewById(R.id.gridViewMain);
 
         // call fill data method tp populate word category array list
-        finish();
+        fillData();
 
         // gridiew adapter to our custom adapter
         CategoryCustomAdapter customAdapter = new CategoryCustomAdapter(this,wordCategories);
