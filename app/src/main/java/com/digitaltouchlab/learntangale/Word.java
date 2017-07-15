@@ -9,14 +9,14 @@ public class Word {
     private String tangaleTranlation;
     private String englishTranlation;
     private String hausaTranlation;
-    private int wordImageId;
+
 
     // define constructor
-    public Word(String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId) {
+    public Word(String tangaleTranlation, String englishTranlation, String hausaTranlation) {
         this.tangaleTranlation = tangaleTranlation;
         this.englishTranlation = englishTranlation;
         this.hausaTranlation = hausaTranlation;
-        this.wordImageId = wordImageId;
+
     }
 
     // define getters
@@ -32,7 +32,5 @@ public class Word {
         return hausaTranlation;
     }
 
-    public int getWordImageId() {
-        return wordImageId;
-    }
+
 }
