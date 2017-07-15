@@ -3,6 +3,8 @@ package com.digitaltouchlab.learntangale;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import java.util.ArrayList;
@@ -35,7 +37,13 @@ public class MainActivity extends AppCompatActivity {
         CategoryCustomAdapter customAdapter = new CategoryCustomAdapter(this,wordCategories);
         categotyGV.setAdapter(customAdapter);
 
-
+        categotyGV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                // call loadActivity to start the activity
+                loadAcivity(position);
+            }
+        });
 
 
     }
