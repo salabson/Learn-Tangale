@@ -19,7 +19,7 @@ public class WordCategory {
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
-    
+
     public void  setCategoryImageId(int categoryImageId) {
         this.categoryImageId = categoryImageId;
     }
