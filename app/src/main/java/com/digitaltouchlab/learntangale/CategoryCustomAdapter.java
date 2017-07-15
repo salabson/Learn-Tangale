@@ -20,7 +20,7 @@ import java.util.List;
 public class CategoryCustomAdapter extends ArrayAdapter<WordCategory> {
     Context mContext;
 
-    public CategoryCustomAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<WordCategory> WordCategories) {
+    public CategoryCustomAdapter(@NonNull Context context, @NonNull List<WordCategory> WordCategories) {
         super(context, 0, WordCategories);
         mContext = context;
     }
