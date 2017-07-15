@@ -5,5 +5,22 @@ package com.digitaltouchlab.learntangale;
  */
 
 public class WordCategory {
+    // define class member variables
+    private String categoryName;
+    private int categoryImageId;
+
+    // define constructor and initialise member variables
+    public WordCategory(String categoryName, int categoryImageId) {
+        this.categoryName = categoryName;
+        this.categoryImageId = categoryImageId;
+    }
+
+    // define getters
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
     
+    public void  setCategoryImageId(int categoryImageId) {
+        this.categoryImageId = categoryImageId;
+    }
 }
