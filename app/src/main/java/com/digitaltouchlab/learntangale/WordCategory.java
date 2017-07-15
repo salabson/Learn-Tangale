@@ -15,12 +15,14 @@ public class WordCategory {
         this.categoryImageId = categoryImageId;
     }
 
-    // define getters
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
+    // define setters
+    public String getCategoryName() {
+        return this.categoryName;
     }
 
-    public void  setCategoryImageId(int categoryImageId) {
-        this.categoryImageId = categoryImageId;
+    public int  getCategoryImageId() {
+        return this.categoryImageId;
     }
+
+    //
 }
