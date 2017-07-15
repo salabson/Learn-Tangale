@@ -19,6 +19,9 @@ public class Word {
 
     }
 
+    public Word() {
+    }
+
     // define getters
     public String getTangaleTranlation() {
         return tangaleTranlation;
