@@ -16,10 +16,10 @@ import java.util.List;
 
 public class WordCustomAdapater extends BaseExpandableListAdapter{
     Context mContext;
-    List<String> listParentData;
-    HashMap<String, List<String>>  listChildData;
+    List<Word> listParentData;
+    HashMap<String, List<Word>>  listChildData;
 
-    public WordCustomAdapater(Context mContext, List<String> listChildData, HashMap<String, List<String>> listParentData) {
+    public WordCustomAdapater(Context mContext, List<Word> listChildData, HashMap<String, List<Word>> listParentData) {
         this.mContext = mContext;
         listChildData = listChildData;
         listParentData = listParentData;
@@ -63,7 +63,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
     @Override
     public View getGroupView(int groupPosition, boolean b, View convertView, ViewGroup viewGroup) {
         // get data at the current postion of the parent list
-        String parentTitle = (String) getGroup(groupPosition);
+        Word currentWord = (Word) getGroup(groupPosition);
         // check if there is View for reuse otherwise inflate one
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -72,7 +72,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
 
         // get reference of parent textview and set it
         TextView parentText = (TextView) convertView.findViewById(R.id.txtParent);
-        parentText.setText(parentTitle);
+        parentText.setText(currentWord.getEnglishTranlation());
         // return the for display on expandable list view
         return convertView;
     }
