@@ -52,10 +52,13 @@ public class AnimalsActivity extends AppCompatActivity {
         // create variable that hold each word
         Word word = new Word();
 
-        //
+        // iterate through list of words and extract parent and child data
         for (int i = 0; i < words.size(); i++) {
+            // get word at specific location
             word = words.get(i);
+            //Add english word to parent list
             parentData.add(word.getEnglishTranlation());
+            //get english word as key and tangale word add it to list then pass to child data as value
             wordList = new ArrayList<>();
             wordList.add(word.getTangaleTranlation());
             childData.put(word.getEnglishTranlation(),wordList);
