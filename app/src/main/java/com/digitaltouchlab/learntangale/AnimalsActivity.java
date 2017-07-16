@@ -3,6 +3,8 @@ package com.digitaltouchlab.learntangale;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -16,7 +18,7 @@ public class AnimalsActivity extends AppCompatActivity {
      List<Word> words;
     //hold each list for child data
     List<String> wordList;
-
+   private int lastSelectedItem = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,17 @@ public class AnimalsActivity extends AppCompatActivity {
         // create custom adapter object and set expandable list view to it
         WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
         expLV.setAdapter(customAdapater);
+
+               expLV.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+                    @Override
+                    public void onGroupExpand(int groupPosition) {
+                        if (lastSelectedItem != -1 &&  groupPosition != lastSelectedItem  ) {
+                            expLV.collapseGroup(lastSelectedItem);
+                        }
+                        lastSelectedItem = groupPosition;
+                    }
+                });
+
 
 
     }
