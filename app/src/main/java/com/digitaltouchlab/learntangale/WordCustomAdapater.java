@@ -19,20 +19,20 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
     List<String> listParentData;
     HashMap<String, List<String>>  listChildData;
 
-    public WordCustomAdapater(Context mContext, HashMap<String, String> listChildData, List<String> listParentData) {
+    public WordCustomAdapater(Context mContext, HashMap<String, List<String>> listChildData, List<String> listParentData) {
         this.mContext = mContext;
-        listChildData = listChildData;
-        listParentData = listParentData;
+        this.listChildData = listChildData;
+        this. listParentData = listParentData;
     }
 
     @Override
     public int getGroupCount() {
-        return this.listParentData.size();
+        return listParentData.size();
     }
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return listChildData.get(listParentData.get(groupPosition)).size();
+        return this.listChildData.get(listParentData.get(groupPosition)).size();
     }
 
     @Override
@@ -42,7 +42,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        return listChildData.get(listParentData.get(groupPosition)).get(childPosition);
+        return this.listChildData.get(listParentData.get(groupPosition)).get(childPosition);
     }
 
     @Override
@@ -84,7 +84,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
         // check if there is View for reuse otherwise inflate one
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.parent_word_item,null);
+            convertView = inflater.inflate(R.layout.child_word_item,null);
         }
 
         // get reference of parent textview and set it
