@@ -50,11 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void fillData() {
         wordCategories = new ArrayList<>();
-        wordCategories.add(new WordCategory("Animals", R.drawable.catagoryimage));
-        wordCategories.add(new WordCategory("Family", R.drawable.catagoryimage));
-        wordCategories.add(new WordCategory("Counting", R.drawable.catagoryimage));
-        wordCategories.add(new WordCategory("Enquiries", R.drawable.catagoryimage));
-        wordCategories.add(new WordCategory("Phrases", R.drawable.catagoryimage));
+        wordCategories.add(new WordCategory("Animals", R.drawable.ic_animals));
+        wordCategories.add(new WordCategory("Family", R.drawable.family));
+        wordCategories.add(new WordCategory("Counting", R.drawable.numbers));
+        wordCategories.add(new WordCategory("Enquiries", R.drawable.question));
+        wordCategories.add(new WordCategory("Phrases", R.drawable.phrases));
+        wordCategories.add(new WordCategory("Time and Dates", R.drawable.time));
 
     }
 
