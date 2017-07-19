@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.digitaltouchlab.learntangale.AnimalsActivity">
+    tools:context="com.digitaltouchlab.learntangale.AnimalsActivity"
+    android:background="@color/white">
 <ExpandableListView
     android:id="@+id/exp_lv"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    />
 </LinearLayout>

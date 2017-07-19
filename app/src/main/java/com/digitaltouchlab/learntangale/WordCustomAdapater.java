@@ -90,6 +90,16 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
         // get reference of parent textview and set it
         TextView childText = (TextView) convertView.findViewById(R.id.txtChild);
         childText.setText(childTitle);
+
+        // display bottom divided in child at the end of the child list item
+        TextView childBottomDivider = (TextView)convertView.findViewById(R.id.txtChildBottomDivider);
+        if (childPosition == getChildrenCount(groupPosition) - 1) {
+            // set the divider to visible
+            childBottomDivider.setVisibility(View.VISIBLE);
+        } else {
+            // hide the divider
+            childBottomDivider.setVisibility(View.GONE);
+        }
         // return the for display on expandable list view
         return convertView;
     }

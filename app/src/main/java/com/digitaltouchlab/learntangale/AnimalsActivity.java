@@ -28,6 +28,8 @@ public class AnimalsActivity extends AppCompatActivity {
         // make reference to expandable listview
         expLV = new ExpandableListView(this);
         expLV = (ExpandableListView)findViewById(R.id.exp_lv);
+        expLV.setDivider(getResources().getDrawable(R.color.black));
+        expLV.setDividerHeight(1);
 
         // call method that populate parent and child data
         fillData();

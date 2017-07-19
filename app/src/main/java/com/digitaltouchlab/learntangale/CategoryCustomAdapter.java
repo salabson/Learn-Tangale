@@ -43,6 +43,7 @@ public class CategoryCustomAdapter extends ArrayAdapter<WordCategory> {
         TextView wordCategoryDecs = (TextView) convertView.findViewById(R.id.wordCategoryDesc);
         wordCategoryDecs.setText(currentWordCategory.getCategoryName());
 
+
         return convertView;
     }
 }
