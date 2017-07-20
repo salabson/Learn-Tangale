@@ -13,11 +13,11 @@ import java.util.List;
 
 public class AnimalsActivity extends AppCompatActivity {
     ExpandableListView expLV;
-    List<String> parentData ;
-    HashMap<String,List<String>> childData;
+    List<Word> parentData ;
+    HashMap<String,List<Word>> childData;
      List<Word> words;
     //hold each list for child data
-    List<String> wordList;
+    List<Word> wordList;
    private int lastSelectedItem = -1;
 
     @Override
@@ -58,12 +58,12 @@ public class AnimalsActivity extends AppCompatActivity {
         childData = new HashMap<>();
         words = new ArrayList<>();
         //initialize arraylist of words
-        words.add( new Word("Bai", "Dog", "Kare"));
-        words.add( new Word("Babba", "Donkey", "Jaki"));
-        words.add( new Word("Ankilin", "Lizard", "Kadangare"));
-        words.add( new Word("Tuje", "Horse", "Doki"));
-        words.add( new Word("Tanga", "Cow", "Shanu"));
-        words.add( new Word("Andokko", "Grasshopper", "Fara"));
+        words.add( new Word("Bai", "Dog", "Kare",R.drawable.animals));
+        words.add( new Word("Babba", "Donkey", "Jaki", R.drawable.donkey));
+        words.add( new Word("Ankilin", "Lizard", "Kadangare", R.drawable.lizard));
+        words.add( new Word("Tuje", "Horse", "Doki", R.drawable.horse));
+        words.add( new Word("Tanga", "Cow", "Shanu", R.drawable.cow));
+        words.add( new Word("Andokko", "Grasshopper", "Fara", R.drawable.grassphopper));
         // create variable that hold each word
         Word word = new Word();
 
@@ -71,11 +71,11 @@ public class AnimalsActivity extends AppCompatActivity {
         for (int i = 0; i < words.size(); i++) {
             // get word at specific location
             word = words.get(i);
-            //Add english word to parent list
-            parentData.add(word.getEnglishTranlation());
-            //get english word as key and tangale word add it to list then pass to child data as value
+            //Add the word to parent list
+            parentData.add(word);
+            // create new list and add it to the child list
             wordList = new ArrayList<>();
-            wordList.add(word.getTangaleTranlation());
+            wordList.add(word);
             childData.put(word.getEnglishTranlation(),wordList);
         }
 

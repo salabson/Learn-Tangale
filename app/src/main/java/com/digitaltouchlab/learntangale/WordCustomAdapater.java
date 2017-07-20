@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -16,10 +17,11 @@ import java.util.List;
 
 public class WordCustomAdapater extends BaseExpandableListAdapter{
     Context mContext;
-    List<String> listParentData;
-    HashMap<String, List<String>>  listChildData;
+    List<Word> listParentData;
+    HashMap<String, List<Word>>  listChildData;
+    Word currentWord;
 
-    public WordCustomAdapater(Context mContext, HashMap<String, List<String>> listChildData, List<String> listParentData) {
+    public WordCustomAdapater(Context mContext, HashMap<String, List<Word>> listChildData, List<Word> listParentData) {
         this.mContext = mContext;
         this.listChildData = listChildData;
         this. listParentData = listParentData;
@@ -32,7 +34,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return this.listChildData.get(listParentData.get(groupPosition)).size();
+        return this.listChildData.get(listParentData.get(groupPosition).getEnglishTranlation()).size();
     }
 
     @Override
@@ -42,7 +44,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        return this.listChildData.get(listParentData.get(groupPosition)).get(childPosition);
+        return this.listChildData.get(listParentData.get(groupPosition).getEnglishTranlation()).get(childPosition);
     }
 
     @Override
@@ -63,7 +65,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
     @Override
     public View getGroupView(int groupPosition, boolean b, View convertView, ViewGroup viewGroup) {
         // get data at the current postion of the parent list
-        String parentTitle = (String) getGroup(groupPosition);
+         currentWord = (Word) getGroup(groupPosition);
         // check if there is View for reuse otherwise inflate one
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -72,7 +74,12 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
 
         // get reference of parent textview and set it
         TextView parentText = (TextView) convertView.findViewById(R.id.txtParent);
-        parentText.setText(parentTitle);
+        parentText.setText(currentWord.getEnglishTranlation());
+
+        // get refrence to parent image
+        ImageView  parentImage = (ImageView)convertView.findViewById(R.id.wordImage);
+        parentImage.setImageResource(currentWord.getwordImageId());
+
         // return the for display on expandable list view
         return convertView;
     }
@@ -80,7 +87,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean b, View convertView, ViewGroup viewGroup) {
         // get data at the current postion of the parent list
-        String childTitle = (String) getChild(groupPosition,childPosition);
+         currentWord = (Word) getChild(groupPosition,childPosition);
         // check if there is View for reuse otherwise inflate one
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -89,7 +96,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
 
         // get reference of parent textview and set it
         TextView childText = (TextView) convertView.findViewById(R.id.txtChild);
-        childText.setText(childTitle);
+        childText.setText(currentWord.getTangaleTranlation());
 
         // display bottom divided in child at the end of the child list item
         TextView childBottomDivider = (TextView)convertView.findViewById(R.id.txtChildBottomDivider);
