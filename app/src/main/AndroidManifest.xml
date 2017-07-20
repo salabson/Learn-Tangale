@@ -16,11 +16,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AnimalsActivity" android:label="Animals" />
-        <activity android:name=".FamilyActivity"  android:label="Family"/>
-        <activity android:name=".CountingActivity" android:label="Counting" />
-        <activity android:name=".EnquiriesActivity" android:label="Enquiries"/>
-        <activity android:name=".PhrasesActivity" android:label="Phrases"/>
+        <activity android:name=".AnimalsActivity" android:label="Animals">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+            </activity>
+        <activity android:name=".FamilyActivity"  android:label="Family">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+            </activity>
+        <activity android:name=".CountingActivity" android:label="Counting" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+            </activity>
+        <activity android:name=".EnquiriesActivity" android:label="Enquiries">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+            </activity>
+        <activity android:name=".PhrasesActivity" android:label="Phrases">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+            </activity>
     </application>
 
 </manifest>
