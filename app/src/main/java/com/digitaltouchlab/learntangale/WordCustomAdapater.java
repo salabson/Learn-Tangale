@@ -20,6 +20,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
     List<Word> listParentData;
     HashMap<String, List<Word>>  listChildData;
     Word currentWord;
+    public boolean favoriteExist = false;
 
     public WordCustomAdapater(Context mContext, HashMap<String, List<Word>> listChildData, List<Word> listParentData) {
         this.mContext = mContext;
@@ -76,7 +77,15 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
         TextView parentText = (TextView) convertView.findViewById(R.id.txtParent);
         parentText.setText(currentWord.getEnglishTranlation());
 
-        // get refrence to parent image
+        // get reference to favorite image
+        ImageView favoriteImage = (ImageView)convertView.findViewById(R.id.favoriteImage);
+        // set image depending on wether exist in the favorite
+        if (favoriteExist) {
+            favoriteImage.setImageResource(R.drawable.ic_favorite_on);
+        } else {
+            favoriteImage.setImageResource(R.drawable.ic_favorite_off);
+        }
+        // get refrence to parent word image
         ImageView  parentImage = (ImageView)convertView.findViewById(R.id.wordImage);
         parentImage.setImageResource(currentWord.getwordImageId());
 
