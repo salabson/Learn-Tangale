@@ -76,7 +76,7 @@ public class SharedPrefrence {
 
     public void addFavorite(Context context, Word word) {
         List<Word> favorites = getFavorite(context, word);
-        if (!favorites.contains(word)) {
+        if (favorites == null) {
             favorites.add(word);
             saveFavorites(context,favorites);
         }
