@@ -10,14 +10,16 @@ public class Word {
     private String englishTranlation;
     private String hausaTranlation;
     private int wordImageId;
+    private boolean isAddedToFavorite;
 
 
     // define constructor
-    public Word(String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId) {
+    public Word(String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId, boolean isAddedToFavorite) {
         this.tangaleTranlation = tangaleTranlation;
         this.englishTranlation = englishTranlation;
         this.hausaTranlation = hausaTranlation;
         this.wordImageId = wordImageId;
+        this.isAddedToFavorite = isAddedToFavorite;
 
     }
 
@@ -41,7 +43,28 @@ public class Word {
         return this.wordImageId;
     }
 
+    public boolean getIsAddedToFavorit() {
+        return isAddedToFavorite;
+    }
 
+    // define setters
+    public void setTangaleTranlation(String tangaleTranlation) {
+        this.tangaleTranlation = tangaleTranlation;
+    }
 
+    public void setEnglishTranlation(String englishTranlation) {
+        this.englishTranlation = englishTranlation;
+    }
 
+    public void setHausaTranlation(String hausaTranlation) {
+        this.hausaTranlation = hausaTranlation;
+    }
+
+    public void setWordImageId(int wordImageId) {
+        this.wordImageId = wordImageId;
+    }
+
+    public void setAddedToFavorite(boolean addedToFavorite) {
+        isAddedToFavorite = addedToFavorite;
+    }
 }

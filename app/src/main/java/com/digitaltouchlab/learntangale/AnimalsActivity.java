@@ -59,12 +59,12 @@ public class AnimalsActivity extends AppCompatActivity {
         childData = new HashMap<>();
         words = new ArrayList<>();
         //initialize arraylist of words
-        words.add( new Word("Bai", "Dog", "Kare",R.drawable.animals));
-        words.add( new Word("Babba", "Donkey", "Jaki", R.drawable.donkey));
-        words.add( new Word("Ankilin", "Lizard", "Kadangare", R.drawable.lizard));
-        words.add( new Word("Tuje", "Horse", "Doki", R.drawable.horse));
-        words.add( new Word("Tanga", "Cow", "Shanu", R.drawable.cow));
-        words.add( new Word("Andokko", "Grasshopper", "Fara", R.drawable.grassphopper));
+        words.add( new Word("Bai", "Dog", "Kare",R.drawable.animals, false));
+        words.add( new Word("Babba", "Donkey", "Jaki", R.drawable.donkey, false));
+        words.add( new Word("Ankilin", "Lizard", "Kadangare", R.drawable.lizard,false));
+        words.add( new Word("Tuje", "Horse", "Doki", R.drawable.horse,false));
+        words.add( new Word("Tanga", "Cow", "Shanu", R.drawable.cow, false));
+        words.add( new Word("Andokko", "Grasshopper", "Fara", R.drawable.grassphopper, false));
         // create variable that hold each word
         Word word = new Word();
 
