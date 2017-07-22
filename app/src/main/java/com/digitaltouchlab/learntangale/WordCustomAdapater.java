@@ -63,7 +63,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
     }
 
     @Override
-    public View getGroupView(int groupPosition, boolean b, View convertView, ViewGroup viewGroup) {
+    public View getGroupView( final int groupPosition, boolean b, View convertView, ViewGroup viewGroup) {
         // get data at the current postion of the parent list
          currentWord = (Word) getGroup(groupPosition);
         // check if there is View for reuse otherwise inflate one
@@ -79,28 +79,39 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
         // get reference to favorite image
         final ImageView favoriteImage = (ImageView)convertView.findViewById(R.id.favoriteImage);
         // set image depending on wether exist in the favorite
+        if (currentWord.getIsAddedToFavorit()) {
+
+            // turn the image off
+            favoriteImage.setImageResource(R.drawable.ic_favorite_on);
+            // change favorite exist to false
+            currentWord.setAddedToFavorite(true);
+        } else {
+            // turn the image on
             favoriteImage.setImageResource(R.drawable.ic_favorite_off);
+            // change favorite exist to false
+            currentWord.setAddedToFavorite(false);
+        }
 
 
         // add word to favorite list and change favorite image to on or off
         favoriteImage.setOnClickListener(new View.OnClickListener() {
-            boolean favoriteExist;
+             Word currentWord = (Word) getGroup(groupPosition);
             @Override
             public void onClick(View view) {
-                if (favoriteExist) {
+                if (currentWord.getIsAddedToFavorit()) {
                     // add stuff to remove the word from favorite
                     //.......
                     // turn the image off
                     favoriteImage.setImageResource(R.drawable.ic_favorite_off);
                     // change favorite exist to false
-                    favoriteExist = false;
+                    currentWord.setAddedToFavorite(false);
                 } else {
                     // add stuff to add the word to favorite
                     ///........
                     // turn the image on
                     favoriteImage.setImageResource(R.drawable.ic_favorite_on);
                     // change favorite exist to false
-                    favoriteExist =true;
+                    currentWord.setAddedToFavorite(true);
                 }
             }
         });
