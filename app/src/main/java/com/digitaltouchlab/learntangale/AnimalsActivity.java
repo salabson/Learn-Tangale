@@ -1,5 +1,7 @@
 package com.digitaltouchlab.learntangale;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +22,7 @@ public class AnimalsActivity extends AppCompatActivity {
     //hold each list for child data
     List<Word> wordList;
    private int lastSelectedItem = -1;
+    SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,13 +61,18 @@ public class AnimalsActivity extends AppCompatActivity {
         parentData = new ArrayList<>();
         childData = new HashMap<>();
         words = new ArrayList<>();
+        Cursor mCursor = getAllWords();
         //initialize arraylist of words
-        words.add( new Word("Bai", "Dog", "Kare",R.drawable.animals, false));
-        words.add( new Word("Babba", "Donkey", "Jaki", R.drawable.donkey, true));
-        words.add( new Word("Ankilin", "Lizard", "Kadangare", R.drawable.lizard,false));
-        words.add( new Word("Tuje", "Horse", "Doki", R.drawable.horse,true));
-        words.add( new Word("Tanga", "Cow", "Shanu", R.drawable.cow, false));
-        words.add( new Word("Andokko", "Grasshopper", "Fara", R.drawable.grassphopper, true));
+        for (int y = 0; y < mCursor.getCount(); y++) {
+            String tangale = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE));
+            String english = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH));
+            String hausa = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA));
+            int imageId = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID));
+            boolean isAddedToFavorite = Boolean.parseBoolean(mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE)));
+            words.add( new Word(tangale, english, hausa, imageId, isAddedToFavorite));
+
+        }
+
         // create variable that hold each word
         Word word = new Word();
 
@@ -86,5 +94,17 @@ public class AnimalsActivity extends AppCompatActivity {
 
 
 
+    }
+
+
+    public Cursor getAllWords() {
+        return db.query(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null);
     }
 }
