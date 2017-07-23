@@ -29,6 +29,8 @@ public class AnimalsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word);
 
+        InsertData.insertData(db);
+
         // make reference to expandable listview
         expLV = new ExpandableListView(this);
         expLV = (ExpandableListView)findViewById(R.id.exp_lv);
