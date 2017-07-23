@@ -15,8 +15,8 @@ public class LearnTangaleDbHelper extends SQLiteOpenHelper{
         // the database name
     private static final String DATABASE_NAME = "learntangale.db";
 
-    // you must channge this if you change the schema of the db
-    private static int  DATABASE_VERSION = 1;
+    // If you change the database schema, you must increment the database version
+    private final static int  DATABASE_VERSION = 1;
 
     public LearnTangaleDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -41,8 +41,10 @@ public class LearnTangaleDbHelper extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
-        // drop the table if exist and recreate the table
+        // For now simply drop the table and create a new one. This means if you change the
+        // DATABASE_VERSION the table will be dropped.
+        // In a production app, this method might be modified to ALTER the table
+        // instead of dropping it, so that existing data is not deleted.
         sqLiteDatabase.execSQL("DROP TABLE IF EXIST " + LearnTangaleContract.LearnTangaleEntry.TABLE_NAME);
         onCreate(sqLiteDatabase);
 
