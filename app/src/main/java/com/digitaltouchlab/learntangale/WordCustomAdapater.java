@@ -95,6 +95,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
 
         // add word to favorite list and change favorite image to on or off
         favoriteImage.setOnClickListener(new View.OnClickListener() {
+            // get current word in this scope
              Word currentWord = (Word) getGroup(groupPosition);
             @Override
             public void onClick(View view) {
