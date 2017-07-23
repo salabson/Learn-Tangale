@@ -27,6 +27,7 @@ public class LearnTangaleDbHelper extends SQLiteOpenHelper{
         // create table to hold learn tangale data
         final String SQL_CREATE_LEARN_TANGALE_TABLE = "CREATE TABLE " + LearnTangaleContract.LearnTangaleEntry.TABLE_NAME + " ("
                  + LearnTangaleContract.LearnTangaleEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                 + LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE + " TEXT NOT NULL"
                  + LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH + " TEXT NOT NULL, "
                  + LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA + " TEXT NOT NULL, "
                  + LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID + " INT NOT NULL"
