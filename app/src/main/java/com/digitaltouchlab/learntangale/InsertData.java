@@ -33,7 +33,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Dog");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Kare");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.animals);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, false);
+        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         list.add(cv);
 
          cv = new ContentValues();
@@ -41,7 +41,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Monkey");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Jaki");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.donkey);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, true);
+        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
         list.add(cv);
 
          cv = new ContentValues();
@@ -58,7 +58,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Horse");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Doki");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.horse);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, true);
+        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
         list.add(cv);
 
 
@@ -67,7 +67,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Cow");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Shanu");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.cow);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, false);
+        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         list.add(cv);
 
 
@@ -76,7 +76,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Grasshopper");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Fara");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.grassphopper);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, true);
+        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
         list.add(cv);
 
         try {

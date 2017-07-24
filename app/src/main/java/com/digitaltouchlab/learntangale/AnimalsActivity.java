@@ -2,6 +2,7 @@ package com.digitaltouchlab.learntangale;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,12 +24,15 @@ public class AnimalsActivity extends AppCompatActivity {
     List<Word> wordList;
    private int lastSelectedItem = -1;
     SQLiteDatabase db;
+    LearnTangaleDbHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word);
 
+        dbHelper = new LearnTangaleDbHelper(this);
+        db = dbHelper.getWritableDatabase();
         InsertData.insertData(db);
 
         // make reference to expandable listview
@@ -66,13 +70,13 @@ public class AnimalsActivity extends AppCompatActivity {
         Cursor mCursor = getAllWords();
         //initialize arraylist of words
         for (int y = 0; y < mCursor.getCount(); y++) {
-            String tangale = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE));
-            String english = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH));
-            String hausa = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA));
-            int imageId = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID));
-            boolean isAddedToFavorite = Boolean.parseBoolean(mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE)));
-            words.add( new Word(tangale, english, hausa, imageId, isAddedToFavorite));
-
+                mCursor.moveToPosition(y);
+                String tangale = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE));
+                String english = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH));
+                String hausa = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA));
+                int imageId = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID));
+                boolean isAddedToFavorite = Boolean.valueOf(mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE)));
+                words.add(new Word(tangale, english, hausa, imageId, isAddedToFavorite));
         }
 
         // create variable that hold each word
@@ -100,7 +104,8 @@ public class AnimalsActivity extends AppCompatActivity {
 
 
     public Cursor getAllWords() {
-        return db.query(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
+
+         Cursor cursor = db.query(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
                 null,
                 null,
                 null,
@@ -108,5 +113,8 @@ public class AnimalsActivity extends AppCompatActivity {
                 null,
                 null,
                 null);
+
+        return cursor;
     }
+
 }
