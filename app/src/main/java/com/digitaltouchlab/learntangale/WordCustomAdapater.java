@@ -1,6 +1,9 @@
 package com.digitaltouchlab.learntangale;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +24,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
     HashMap<String, List<Word>>  listChildData;
     Word currentWord;
 
-    public WordCustomAdapater(Context mContext, HashMap<String, List<Word>> listChildData, List<Word> listParentData) {
+    public WordCustomAdapater(Context mContext, HashMap<String, List<Word>> listChildData, List<Word> listParentData ) {
         this.mContext = mContext;
         this.listChildData = listChildData;
         this. listParentData = listParentData;
@@ -66,6 +69,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
     public View getGroupView( final int groupPosition, boolean b, View convertView, ViewGroup viewGroup) {
         // get data at the current postion of the parent list
          currentWord = (Word) getGroup(groupPosition);
+
         // check if there is View for reuse otherwise inflate one
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -79,17 +83,17 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
         // get reference to favorite image
         final ImageView favoriteImage = (ImageView)convertView.findViewById(R.id.favoriteImage);
         // set image depending on wether exist in the favorite
-        if (currentWord.getIsAddedToFavorit()) {
+        if (Boolean.valueOf(currentWord.getIsAddedToFavorit())) {
 
-            // turn the image off
+            // turn the image on
             favoriteImage.setImageResource(R.drawable.ic_favorite_on);
             // change favorite exist to false
-            currentWord.setAddedToFavorite(true);
+            currentWord.setAddedToFavorite("true");
         } else {
-            // turn the image on
+            // turn the image off
             favoriteImage.setImageResource(R.drawable.ic_favorite_off);
             // change favorite exist to false
-            currentWord.setAddedToFavorite(false);
+            currentWord.setAddedToFavorite("false");
         }
 
 
@@ -97,22 +101,57 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
         favoriteImage.setOnClickListener(new View.OnClickListener() {
             // get current word in this scope
              Word currentWord = (Word) getGroup(groupPosition);
+            long id = groupPosition + 1;
+             SQLiteDatabase db;
+            LearnTangaleDbHelper dbHelper = new LearnTangaleDbHelper(mContext);
+
+
             @Override
             public void onClick(View view) {
-                if (currentWord.getIsAddedToFavorit()) {
+
+                db = dbHelper.getWritableDatabase();
+                if (Boolean.valueOf(currentWord.getIsAddedToFavorit())) {
                     // add stuff to remove the word from favorite
                     //.......
                     // turn the image off
                     favoriteImage.setImageResource(R.drawable.ic_favorite_off);
+                    Log.v("WordAdapter", currentWord.getIsAddedToFavorit());
                     // change favorite exist to false
-                    currentWord.setAddedToFavorite(false);
+                    currentWord.setAddedToFavorite("false");
+
+                    ContentValues cv = new ContentValues();
+                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE, currentWord.getTangaleTranlation());
+                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH,currentWord.getEnglishTranlation());
+                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
+                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID,currentWord.getwordImageId() );
+                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
+                    Log.v("WordAdapter", id + " " + currentWord.getIsAddedToFavorit() );
+
+
+                    try{
+                        int z = db.update(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,cv, LearnTangaleContract.LearnTangaleEntry._ID + "=" + id,null);
+                        db.close();
+                        Log.v("WordAdapter", "update result " + z );
+                    }catch (Exception e){
+                        e.printStackTrace();
+                        db.close();
+                    }
+
                 } else {
                     // add stuff to add the word to favorite
                     ///........
                     // turn the image on
                     favoriteImage.setImageResource(R.drawable.ic_favorite_on);
                     // change favorite exist to false
-                    currentWord.setAddedToFavorite(true);
+                    currentWord.setAddedToFavorite("true");
+                    ContentValues cv = new ContentValues();
+                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE, currentWord.getTangaleTranlation());
+                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH,currentWord.getEnglishTranlation());
+                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
+                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID,currentWord.getwordImageId() );
+                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
+
+                    db.update(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,cv, LearnTangaleContract.LearnTangaleEntry._ID + "=" + id,null);
                 }
             }
         });

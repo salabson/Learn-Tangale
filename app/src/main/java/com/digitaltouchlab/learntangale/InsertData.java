@@ -49,7 +49,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Lizard");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Kadangare");
         cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.lizard);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, false);
+        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         list.add(cv);
 
 
@@ -88,10 +88,10 @@ public class InsertData {
                 db.insert(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,null,c);
             }
             db.setTransactionSuccessful();
+            db.endTransaction();
 
         } catch (SQLException e) {
         }finally {
-            db.endTransaction();
         }
 
 
