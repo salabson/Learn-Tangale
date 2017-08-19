@@ -23,7 +23,9 @@ public class AnimalsActivity extends AppCompatActivity {
      List<Word> words;
     //hold each list for child data
     List<Word> wordList;
+    // no item selected for the parent list view for the first time
    private int lastSelectedItem = -1;
+    // database  access variables
      SQLiteDatabase db;
      LearnTangaleDbHelper dbHelper;
 
@@ -49,10 +51,11 @@ public class AnimalsActivity extends AppCompatActivity {
         // create custom adapter object and set expandable list view to it
         WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
         expLV.setAdapter(customAdapater);
-
+                // collapse one parent list view item when another is expanded
                expLV.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
                     @Override
                     public void onGroupExpand(int groupPosition) {
+
                         if (lastSelectedItem != -1 &&  groupPosition != lastSelectedItem  ) {
                             expLV.collapseGroup(lastSelectedItem);
                         }
