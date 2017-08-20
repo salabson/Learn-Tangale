@@ -5,6 +5,5 @@
     android:name="com.digitaltouchlab.learntangale.SettingsFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.digitaltouchlab.learntangale.SettingsActivity">
+    tools:context="com.digitaltouchlab.learntangale.SettingsActivity"/>
 
-</fragment>

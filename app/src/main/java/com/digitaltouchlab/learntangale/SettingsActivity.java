@@ -16,21 +16,5 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-       getMenuInflater().inflate(R.menu.learn_tangale_menu,menu);
-        return true;
-    }
 
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            Intent settingIntent = new Intent(this,SettingsActivity.class);
-            startActivity(settingIntent);
-
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }

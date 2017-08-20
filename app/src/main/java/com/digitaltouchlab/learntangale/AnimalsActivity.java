@@ -1,12 +1,15 @@
 package com.digitaltouchlab.learntangale;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ExpandableListView;
@@ -124,14 +127,25 @@ public class AnimalsActivity extends AppCompatActivity {
         return cursor;
     }
 
-    public  void updateWord(String tangale, String english, String hausa, int imageId, String isAddedToFavorite ,long id) {
-        ContentValues cv = new ContentValues();
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE, tangale);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH,english);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA, hausa);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID,imageId );
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE,isAddedToFavorite);
-
-        db.update(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,cv, LearnTangaleContract.LearnTangaleEntry._ID + "=" + id,null);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.learn_tangale_menu,menu);
+        return true;
     }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            Intent settingIntent = new Intent(this,SettingsActivity.class);
+            startActivity(settingIntent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+
 }
