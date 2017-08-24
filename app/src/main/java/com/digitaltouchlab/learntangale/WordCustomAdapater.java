@@ -2,7 +2,9 @@ package com.digitaltouchlab.learntangale;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +20,7 @@ import java.util.List;
  * Created by salabs on 15/07/2017.
  */
 
-public class WordCustomAdapater extends BaseExpandableListAdapter{
+public class WordCustomAdapater extends BaseExpandableListAdapter implements SharedPreferences.OnSharedPreferenceChangeListener{
     Context mContext;
     List<Word> listParentData;
     HashMap<String, List<Word>>  listChildData;
@@ -66,8 +68,8 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
     }
 
     @Override
-    public View getGroupView( final int groupPosition, boolean b, View convertView, ViewGroup viewGroup) {
-        // get data at the current postion of the parent list
+    public View getGroupView( final int groupPosition, boolean b,  View convertView, ViewGroup viewGroup) {
+        // get data at the current position of the parent list
          currentWord = (Word) getGroup(groupPosition);
 
         // check if there is View for reuse otherwise inflate one
@@ -75,10 +77,23 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.parent_word_item,null);
         }
-
-        // get reference of parent textview and set it
+        // get reference of parent textview
         TextView parentText = (TextView) convertView.findViewById(R.id.txtParent);
-        parentText.setText(currentWord.getEnglishTranlation());
+        // get all share preferences
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
+        String translationLanguage;
+        // read the share preferences by key and  assign to variable
+        translationLanguage = sharedPreferences.getString(mContext.getString(R.string.pref_translation_key),mContext.getString(R.string.pref_hausa_translation_value));
+        Log.v("translang",translationLanguage);
+        if (translationLanguage.equals(mContext.getString(R.string.pref_english_translation_value))) {
+            Log.v("translang2", translationLanguage);
+            // set the @parentText to English
+            parentText.setText(currentWord.getEnglishTranlation());
+        } else if (translationLanguage.equals(mContext.getString(R.string.pref_hausa_translation_value)) ) {
+            // set the @parentText to English
+            parentText.setText(currentWord.getHausaTranlation());
+        }
+
 
         // get reference to favorite image
         final ImageView favoriteImage = (ImageView)convertView.findViewById(R.id.favoriteImage);
@@ -194,5 +209,10 @@ public class WordCustomAdapater extends BaseExpandableListAdapter{
     @Override
     public boolean isChildSelectable(int i, int i1) {
         return true;
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+
     }
 }
