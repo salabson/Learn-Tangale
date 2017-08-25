@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class AnimalsActivity extends AppCompatActivity {
+public class AnimalsActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
     ExpandableListView expLV;
     List<Word> parentData ;
     HashMap<String,List<Word>> childData;
@@ -31,6 +31,7 @@ public class AnimalsActivity extends AppCompatActivity {
    private int lastSelectedItem = -1;
      SQLiteDatabase db;
      LearnTangaleDbHelper dbHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class AnimalsActivity extends AppCompatActivity {
                expLV.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
                     @Override
                     public void onGroupExpand(int groupPosition) {
+                        expLV.setDividerHeight(0);
                         if (lastSelectedItem != -1 &&  groupPosition != lastSelectedItem  ) {
                             expLV.collapseGroup(lastSelectedItem);
                         }
@@ -148,13 +150,30 @@ public class AnimalsActivity extends AppCompatActivity {
     }
 
 
-    public void setUpPreferences() {
-        // Get all of the values from shared preferences to set it up
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(getString(R.string.pref_translation_key),getString(R.string.pref_hausa_translation_value));
-        editor.apply();
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+         PreferenceManager.getDefaultSharedPreferences(this)
+                 .registerOnSharedPreferenceChangeListener(this);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .unregisterOnSharedPreferenceChangeListener(this);
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String Key) {
+
+        // call method that populate parent and child data
+        fillData();
+
+        // create custom adapter object and set expandable list view to it
+        WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
+
+    }
 }
