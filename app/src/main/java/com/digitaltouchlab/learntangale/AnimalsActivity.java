@@ -1,12 +1,17 @@
 package com.digitaltouchlab.learntangale;
 
 import android.content.ContentValues;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ExpandableListView;
@@ -16,7 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class AnimalsActivity extends AppCompatActivity {
+public class AnimalsActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
     ExpandableListView expLV;
     List<Word> parentData ;
     HashMap<String,List<Word>> childData;
@@ -28,6 +33,7 @@ public class AnimalsActivity extends AppCompatActivity {
     // database  access variables
      SQLiteDatabase db;
      LearnTangaleDbHelper dbHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,14 +133,49 @@ public class AnimalsActivity extends AppCompatActivity {
         return cursor;
     }
 
-    public  void updateWord(String tangale, String english, String hausa, int imageId, String isAddedToFavorite ,long id) {
-        ContentValues cv = new ContentValues();
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE, tangale);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH,english);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA, hausa);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID,imageId );
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE,isAddedToFavorite);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.learn_tangale_menu,menu);
+        return true;
+    }
 
-        db.update(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,cv, LearnTangaleContract.LearnTangaleEntry._ID + "=" + id,null);
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            Intent settingIntent = new Intent(this,SettingsActivity.class);
+            startActivity(settingIntent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+         PreferenceManager.getDefaultSharedPreferences(this)
+                 .registerOnSharedPreferenceChangeListener(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .unregisterOnSharedPreferenceChangeListener(this);
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String Key) {
+
+        // call method that populate parent and child data
+        fillData();
+
+        // create custom adapter object and set expandable list view to it
+        WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
+
     }
 }
