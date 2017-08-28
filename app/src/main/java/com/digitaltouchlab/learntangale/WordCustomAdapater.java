@@ -20,7 +20,7 @@ import java.util.List;
  * Created by salabs on 15/07/2017.
  */
 
-public class WordCustomAdapater extends BaseExpandableListAdapter implements SharedPreferences.OnSharedPreferenceChangeListener{
+public class WordCustomAdapater extends BaseExpandableListAdapter {
     Context mContext;
     List<Word> listParentData;
     HashMap<String, List<Word>>  listChildData;
@@ -171,7 +171,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter implements Sha
             }
         });
 
-        // get refrence to parent word image
+        // get reference to parent word image
         ImageView  parentImage = (ImageView)convertView.findViewById(R.id.wordImage);
         parentImage.setImageResource(currentWord.getwordImageId());
 
@@ -211,8 +211,5 @@ public class WordCustomAdapater extends BaseExpandableListAdapter implements Sha
         return true;
     }
 
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
 
-    }
 }

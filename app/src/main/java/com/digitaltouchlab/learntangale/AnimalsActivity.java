@@ -59,7 +59,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
                expLV.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
                     @Override
                     public void onGroupExpand(int groupPosition) {
-                        expLV.setDividerHeight(0);
+
                         if (lastSelectedItem != -1 &&  groupPosition != lastSelectedItem  ) {
                             expLV.collapseGroup(lastSelectedItem);
                         }
