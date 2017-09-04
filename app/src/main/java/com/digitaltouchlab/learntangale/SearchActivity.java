@@ -3,6 +3,7 @@ package com.digitaltouchlab.learntangale;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,9 +20,8 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDefaultDisplayHomeAsUpEnabled(true);
         handleIntent(getIntent());
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -30,6 +30,7 @@ public class SearchActivity extends AppCompatActivity {
         handleIntent(intent);
     }
 
+    // this method retrieve search query
     private void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
@@ -48,7 +49,6 @@ public class SearchActivity extends AppCompatActivity {
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setIconified(false);
         searchView.setMaxWidth(Integer.MAX_VALUE);
-        searchView.setSubmitButtonEnabled(true);
         MenuItemCompat.expandActionView(searchViewItem);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -72,7 +72,8 @@ public class SearchActivity extends AppCompatActivity {
 
             @Override
             public boolean onMenuItemActionCollapse(MenuItem item) {
-                return false;
+            finish();
+                return true;
             }
         });
 
@@ -83,7 +84,7 @@ public class SearchActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                onBackPressed();
+                NavUtils.navigateUpFromSameTask(this);
                 return true;
         }
 

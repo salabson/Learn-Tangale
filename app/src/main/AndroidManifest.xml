@@ -63,6 +63,7 @@
                 android:value=".AnimalsActivity" />
         </activity>
         <activity android:name=".SearchActivity"
+            android:label="@string/action_search"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH"/>
