@@ -53,7 +53,8 @@ public class SearchActivity extends AppCompatActivity {
         expLV.setDividerHeight(1);
 
         // call method that populate parent and child data
-        fillData();
+        Cursor mCursor = getAllWords();
+        fillData(mCursor);
 
         // create custom adapter object and set expandable list view to it
         WordCustomAdapater customAdapater = new WordCustomAdapater(this, childData, parentData);
@@ -141,7 +142,7 @@ public class SearchActivity extends AppCompatActivity {
 
 
     // method that populate parent and child data
-    private void fillData() {
+    private void fillData(Cursor cursor) {
         parentData = new ArrayList<>();
         childData = new HashMap<>();
         words = new ArrayList<>();
@@ -149,15 +150,15 @@ public class SearchActivity extends AppCompatActivity {
         Cursor mCursor = getAllWords();
 
         //iterate through the cursor to initialize the arraylist of words
-        for (int y = 0; y < mCursor.getCount(); y++) {
+        for (int y = 0; y < cursor.getCount(); y++) {
             // move cursor to specific row for reading
-            mCursor.moveToPosition(y);
+            cursor.moveToPosition(y);
             // retrieve each column value of the cursor and store it in a variable
-            String tangale = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE));
-            String english = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH));
-            String hausa = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA));
-            int imageId = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID));
-            String isAddedToFavorite = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE));
+            String tangale = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE));
+            String english = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH));
+            String hausa = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA));
+            int imageId = cursor.getInt(cursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID));
+            String isAddedToFavorite = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE));
             // create word object correspond to each row of cursor and add it word list
             words.add(new Word(tangale, english, hausa, imageId, isAddedToFavorite));
         }
@@ -187,6 +188,22 @@ public class SearchActivity extends AppCompatActivity {
                 null,
                 null,
                 null,
+                null,
+                null,
+                null,
+                null);
+
+        return cursor;
+    }
+
+    public Cursor getWordsByQueryString(String query) {
+        String selection = LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH + "=?";
+        String[] selectionArgs = {query};
+
+        Cursor cursor = db.query(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
+                null,
+                selection,
+                selectionArgs,
                 null,
                 null,
                 null,
