@@ -33,6 +33,7 @@ public class SearchActivity extends AppCompatActivity {
     // database  access variables
     SQLiteDatabase db;
     LearnTangaleDbHelper dbHelper;
+    WordCustomAdapater customAdapater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,7 @@ public class SearchActivity extends AppCompatActivity {
         fillData(mCursor);
 
         // create custom adapter object and set expandable list view to it
-        WordCustomAdapater customAdapater = new WordCustomAdapater(this, childData, parentData);
+         customAdapater = new WordCustomAdapater(this, childData, parentData);
         expLV.setAdapter(customAdapater);
         // collapse one parent list view item when another is expanded
         expLV.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
@@ -108,7 +109,9 @@ public class SearchActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                Toast.makeText(SearchActivity.this, newText, Toast.LENGTH_LONG).show();
+                Cursor cursor = getWordsByQueryString(newText);
+                fillData(cursor);
+                customAdapater = new WordCustomAdapater(SearchActivity.this, childData, parentData);
                 return true;
             }
         });
@@ -147,7 +150,7 @@ public class SearchActivity extends AppCompatActivity {
         childData = new HashMap<>();
         words = new ArrayList<>();
         // call to method that return all words the db
-        Cursor mCursor = getAllWords();
+         cursor = getAllWords();
 
         //iterate through the cursor to initialize the arraylist of words
         for (int y = 0; y < cursor.getCount(); y++) {
