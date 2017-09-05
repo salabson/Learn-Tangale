@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -33,7 +34,7 @@ public class SearchActivity extends AppCompatActivity {
     // database  access variables
     SQLiteDatabase db;
     LearnTangaleDbHelper dbHelper;
-    WordCustomAdapater customAdapater;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +59,9 @@ public class SearchActivity extends AppCompatActivity {
         fillData(mCursor);
 
         // create custom adapter object and set expandable list view to it
-         customAdapater = new WordCustomAdapater(this, childData, parentData);
+        WordCustomAdapater customAdapater = new WordCustomAdapater(this, childData, parentData);
         expLV.setAdapter(customAdapater);
+
         // collapse one parent list view item when another is expanded
         expLV.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
             @Override
@@ -83,6 +85,11 @@ public class SearchActivity extends AppCompatActivity {
     private void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
+
+            Cursor cursor = getWordsByQueryString(query);
+            fillData(cursor);
+            WordCustomAdapater customAdapater = new WordCustomAdapater(this, childData, parentData);
+            expLV.setAdapter(customAdapater);
             Log.v("QUERY", query);
         }
 
@@ -98,6 +105,7 @@ public class SearchActivity extends AppCompatActivity {
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchViewItem);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setIconified(false);
+        searchView.setSubmitButtonEnabled(true);
         searchView.setMaxWidth(Integer.MAX_VALUE);
         MenuItemCompat.expandActionView(searchViewItem);
 
@@ -109,9 +117,18 @@ public class SearchActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                Cursor cursor = getWordsByQueryString(newText);
-                fillData(cursor);
-                customAdapater = new WordCustomAdapater(SearchActivity.this, childData, parentData);
+                if (TextUtils.isEmpty(newText) || newText.length() == 0) {
+                    Cursor cursor = getAllWords();
+                    fillData(cursor);
+                    WordCustomAdapater customAdapater = new WordCustomAdapater(SearchActivity.this, childData, parentData);
+                    expLV.setAdapter(customAdapater);
+                } else {
+                    Cursor cursor = getWordsByQueryString(newText);
+                    fillData(cursor);
+                    WordCustomAdapater customAdapater = new WordCustomAdapater(SearchActivity.this, childData, parentData);
+                    expLV.setAdapter(customAdapater);
+                }
+
                 return true;
             }
         });
@@ -150,7 +167,6 @@ public class SearchActivity extends AppCompatActivity {
         childData = new HashMap<>();
         words = new ArrayList<>();
         // call to method that return all words the db
-         cursor = getAllWords();
 
         //iterate through the cursor to initialize the arraylist of words
         for (int y = 0; y < cursor.getCount(); y++) {
@@ -200,19 +216,23 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     public Cursor getWordsByQueryString(String query) {
-        String selection = LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH + "=?";
-        String[] selectionArgs = {query};
 
-        Cursor cursor = db.query(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
+        String selection = LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH + " LIKE " + "'%" + query + "%'" ;
+
+        //String[] selectionArgs = new String[]{"'%" + query + "%'"};
+
+        Cursor cursor = db.query(true,LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
                 null,
                 selection,
-                selectionArgs,
+                null,
                 null,
                 null,
                 null,
                 null);
-
+        String sql = selection ;
+        Log.v("SQL", sql);
         return cursor;
     }
+
 
 }
