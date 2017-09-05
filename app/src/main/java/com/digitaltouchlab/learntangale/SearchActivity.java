@@ -110,6 +110,15 @@ public class SearchActivity extends AppCompatActivity {
         searchView.setSubmitButtonEnabled(true);
         searchView.setMaxWidth(Integer.MAX_VALUE);
         MenuItemCompat.expandActionView(searchViewItem);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String transLanguage = prefs.getString(getString(R.string.pref_translation_key),getString(R.string.pref_english_translation_value));
+       // set searchview hint depending value translation language in sharedprefs
+        if (transLanguage.equals(getString(R.string.pref_english_translation_value))) {
+            searchView.setQueryHint(getString(R.string.search_hint_english));
+        } else if (transLanguage.equals(getString(R.string.pref_hausa_translation_value))) {
+            searchView.setQueryHint(getString(R.string.search_hint_english));
+        }
+
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
