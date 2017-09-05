@@ -3,6 +3,7 @@ package com.digitaltouchlab.learntangale;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.NavUtils;
@@ -10,6 +11,7 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.preference.PreferenceManager;
 import android.support.v7.widget.SearchView;
 import android.text.TextUtils;
 import android.util.Log;
@@ -216,21 +218,32 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     public Cursor getWordsByQueryString(String query) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String transLanguage = prefs.getString(getString(R.string.pref_translation_key),getString(R.string.pref_english_translation_value));
+         Cursor cursor = null;
+        if (transLanguage.equals(getString(R.string.pref_english_translation_value))) {
+            //String[] selectionArgs = new String[]{"'%" + query + "%'"};
+            String selectionByEnglish = LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH + " LIKE " + "'%" + query + "%'" ;
+             cursor = db.query(true,LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
+                    null,
+                    selectionByEnglish,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null);
 
-        String selection = LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH + " LIKE " + "'%" + query + "%'" ;
-
-        //String[] selectionArgs = new String[]{"'%" + query + "%'"};
-
-        Cursor cursor = db.query(true,LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
-                null,
-                selection,
-                null,
-                null,
-                null,
-                null,
-                null);
-        String sql = selection ;
-        Log.v("SQL", sql);
+        } else if (transLanguage.equals(getString(R.string.pref_hausa_translation_value))) {
+             String selectionByHausa = LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA + " LIKE " + "'%" + query + "%'" ;
+             cursor = db.query(true,LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
+                    null,
+                    selectionByHausa,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null);
+        }
         return cursor;
     }
 
