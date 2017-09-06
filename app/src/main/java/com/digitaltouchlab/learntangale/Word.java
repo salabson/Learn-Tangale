@@ -6,6 +6,7 @@ package com.digitaltouchlab.learntangale;
 
 public class Word {
     // define members variables
+    private int id;
     private String tangaleTranlation;
     private String englishTranlation;
     private String hausaTranlation;
@@ -14,7 +15,8 @@ public class Word {
 
 
     // define constructor
-    public Word(String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId, String isAddedToFavorite) {
+    public Word(int id, String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId, String isAddedToFavorite) {
+        this.id = id;
         this.tangaleTranlation = tangaleTranlation;
         this.englishTranlation = englishTranlation;
         this.hausaTranlation = hausaTranlation;
@@ -27,6 +29,9 @@ public class Word {
     }
 
     // define getters
+    public int getId() {
+        return this.id;
+    }
     public String getTangaleTranlation() {
         return this.tangaleTranlation;
     }

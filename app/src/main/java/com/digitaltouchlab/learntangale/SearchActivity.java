@@ -185,13 +185,14 @@ public class SearchActivity extends AppCompatActivity {
             // move cursor to specific row for reading
             cursor.moveToPosition(y);
             // retrieve each column value of the cursor and store it in a variable
+            int id = cursor.getInt(cursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry._ID));
             String tangale = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE));
             String english = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH));
             String hausa = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA));
             int imageId = cursor.getInt(cursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID));
             String isAddedToFavorite = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE));
             // create word object correspond to each row of cursor and add it word list
-            words.add(new Word(tangale, english, hausa, imageId, isAddedToFavorite));
+            words.add(new Word(id,tangale, english, hausa, imageId, isAddedToFavorite));
         }
 
         // create variable that hold each word
