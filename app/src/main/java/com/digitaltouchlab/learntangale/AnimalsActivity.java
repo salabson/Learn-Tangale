@@ -92,13 +92,14 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
                 // move cursor to specific row for reading
                 mCursor.moveToPosition(y);
                 // retrieve each column value of the cursor and store it in a variable
+                int id = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry._ID));
                 String tangale = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE));
                 String english = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH));
                 String hausa = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA));
                 int imageId = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID));
                 String isAddedToFavorite = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE));
                 // create word object correspond to each row of cursor and add it word list
-                words.add(new Word(tangale, english, hausa, imageId, isAddedToFavorite));
+                words.add(new Word(id,tangale, english, hausa, imageId, isAddedToFavorite));
         }
 
         // create variable that hold each word
@@ -170,6 +171,10 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
         super.onResume();
          PreferenceManager.getDefaultSharedPreferences(this)
                  .registerOnSharedPreferenceChangeListener(this);
+
+        fillData();
+        WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
+        expLV.setAdapter(customAdapater);
     }
 
     @Override
