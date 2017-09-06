@@ -77,6 +77,8 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.parent_word_item,null);
         }
+
+
         // get reference of parent textview
         TextView parentText = (TextView) convertView.findViewById(R.id.txtParent);
         // get all share preferences
@@ -116,7 +118,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
         favoriteImage.setOnClickListener(new View.OnClickListener() {
             // get current word in this scope
              Word currentWord = (Word) getGroup(groupPosition);
-            long id = groupPosition + 1;
+            long id = currentWord.getId();
              SQLiteDatabase db;
             LearnTangaleDbHelper dbHelper = new LearnTangaleDbHelper(mContext);
 
