@@ -129,11 +129,13 @@ public class SearchActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                // load all data from the Db if searchview is empty
                 if (TextUtils.isEmpty(newText) || newText.length() == 0) {
                     Cursor cursor = getAllWords();
                     fillData(cursor);
                     WordCustomAdapater customAdapater = new WordCustomAdapater(SearchActivity.this, childData, parentData);
                     expLV.setAdapter(customAdapater);
+                    // load all data from the Db based on searchview string
                 } else {
                     Cursor cursor = getWordsByQueryString(newText);
                     fillData(cursor);
@@ -147,11 +149,13 @@ public class SearchActivity extends AppCompatActivity {
 
         MenuItemCompat.setOnActionExpandListener(searchViewItem, new MenuItemCompat.OnActionExpandListener() {
             @Override
+            // this expand the search view as it return true
             public boolean onMenuItemActionExpand(MenuItem item) {
                 return true;
             }
 
             @Override
+            //this close the search activity as search view collapse
             public boolean onMenuItemActionCollapse(MenuItem item) {
                 finish();
                 return true;
@@ -227,11 +231,12 @@ public class SearchActivity extends AppCompatActivity {
 
         return cursor;
     }
-
+    // get selected data from db based on searchView query string
     public Cursor getWordsByQueryString(String query) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String transLanguage = prefs.getString(getString(R.string.pref_translation_key),getString(R.string.pref_english_translation_value));
          Cursor cursor = null;
+        // query db by english column
         if (transLanguage.equals(getString(R.string.pref_english_translation_value))) {
             //String[] selectionArgs = new String[]{"'%" + query + "%'"};
             String selectionByEnglish = LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH + " LIKE " + "'%" + query + "%'" ;
@@ -243,7 +248,7 @@ public class SearchActivity extends AppCompatActivity {
                     null,
                     null,
                     null);
-
+        //  query db by hausa column
         } else if (transLanguage.equals(getString(R.string.pref_hausa_translation_value))) {
              String selectionByHausa = LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA + " LIKE " + "'%" + query + "%'" ;
              cursor = db.query(true,LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
