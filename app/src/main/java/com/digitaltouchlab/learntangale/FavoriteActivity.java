@@ -45,7 +45,7 @@ public class FavoriteActivity extends AppCompatActivity {
         fillData(cursor);
 
         // create custom adapter object and set expandable list view to it
-        WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
+        FavoriteCustomAdapter customAdapater = new FavoriteCustomAdapter(this,childData,parentData);
         expLV.setAdapter(customAdapater);
         // collapse one parent list view item when another is expanded
         expLV.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
@@ -105,7 +105,7 @@ public class FavoriteActivity extends AppCompatActivity {
         Cursor cursor = getFavoriteWords();
         fillData(cursor);
         // create custom adapter object and set expandable list view to it
-        WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
+        FavoriteCustomAdapter customAdapater = new FavoriteCustomAdapter(this,childData,parentData);
         expLV.setAdapter(customAdapater);
     }
 

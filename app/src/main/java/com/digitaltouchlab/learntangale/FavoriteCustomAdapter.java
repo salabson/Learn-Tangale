@@ -149,6 +149,7 @@ public class FavoriteCustomAdapter extends BaseExpandableListAdapter {
                                 dialogInterface.cancel();
                             }
                         });
+                        builder.create().show();
             }
         });
 
