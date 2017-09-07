@@ -102,7 +102,7 @@ public class FavoriteActivity extends AppCompatActivity {
     public Cursor getFavoriteWords() {
         Cursor cursor = null;
             //String[] selectionArgs = new String[]{"'%" + query + "%'"};
-            String selectionByFavorite = LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE + " = " + true;
+            String selectionByFavorite = LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE + " ='true'" ;
             cursor = db.query(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
                     null,
                     selectionByFavorite,

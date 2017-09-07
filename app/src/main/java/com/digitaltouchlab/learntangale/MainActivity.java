@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityIntent = new Intent(this,EnquiriesActivity.class);
                 break;
             case PHRASES:
-                startActivityIntent = new Intent(this,PhrasesActivity.class);
+                startActivityIntent = new Intent(this,FavoriteActivity.class);
                 break;
 
         }

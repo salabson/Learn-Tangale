@@ -2,8 +2,10 @@ package com.digitaltouchlab.learntangale;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -98,24 +100,13 @@ public class FavoriteCustomAdapter extends BaseExpandableListAdapter {
 
 
         // get reference to favorite image
-        final ImageView favoriteImage = (ImageView)convertView.findViewById(R.id.favoriteImage);
-        // set image depending on wether exist in the favorite
-        if (Boolean.valueOf(currentWord.getIsAddedToFavorit())) {
+        final ImageView deleteImage = (ImageView)convertView.findViewById(R.id.favoriteImage);
+            deleteImage.setImageResource(R.drawable.ic_favorite_on);
 
-            // turn the image on
-            favoriteImage.setImageResource(R.drawable.ic_favorite_on);
-            // change favorite exist to false
-            currentWord.setAddedToFavorite("true");
-        } else {
-            // turn the image off
-            favoriteImage.setImageResource(R.drawable.ic_favorite_off);
-            // change favorite exist to false
-            currentWord.setAddedToFavorite("false");
-        }
 
 
         // add word to favorite list and change favorite image to on or off
-        favoriteImage.setOnClickListener(new View.OnClickListener() {
+        deleteImage.setOnClickListener(new View.OnClickListener() {
             // get current word in this scope
             Word currentWord = (Word) getGroup(groupPosition);
             long id = currentWord.getId();
@@ -125,51 +116,39 @@ public class FavoriteCustomAdapter extends BaseExpandableListAdapter {
 
             @Override
             public void onClick(View view) {
+                // create AlertDialog object
+                AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+                builder.setMessage(mContext.getString(R.string.delete_message))
+                        .setTitle(mContext.getString(R.string.delete_title))
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                db = dbHelper.getWritableDatabase();
+                                currentWord.setAddedToFavorite("false");
+                                ContentValues cv = new ContentValues();
+                                cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE, currentWord.getTangaleTranlation());
+                                cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH,currentWord.getEnglishTranlation());
+                                cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
+                                cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID,currentWord.getwordImageId() );
+                                cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
+                                try{
+                                    int z = db.update(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,cv, LearnTangaleContract.LearnTangaleEntry._ID + "=" + id,null);
+                                    db.close();
+                                    Log.v("WordAdapter", "update result " + z );
+                                }catch (Exception e){
+                                    e.printStackTrace();
+                                    db.close();
+                                }
 
-                db = dbHelper.getWritableDatabase();
-                if (Boolean.valueOf(currentWord.getIsAddedToFavorit())) {
-                    // add stuff to remove the word from favorite
-                    //.......
-                    // turn the image off
-                    favoriteImage.setImageResource(R.drawable.ic_favorite_off);
-                    Log.v("WordAdapter", currentWord.getIsAddedToFavorit());
-                    // change favorite exist to false
-                    currentWord.setAddedToFavorite("false");
-
-                    ContentValues cv = new ContentValues();
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE, currentWord.getTangaleTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH,currentWord.getEnglishTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID,currentWord.getwordImageId() );
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
-                    Log.v("WordAdapter", id + " " + currentWord.getIsAddedToFavorit() );
-
-
-                    try{
-                        int z = db.update(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,cv, LearnTangaleContract.LearnTangaleEntry._ID + "=" + id,null);
-                        db.close();
-                        Log.v("WordAdapter", "update result " + z );
-                    }catch (Exception e){
-                        e.printStackTrace();
-                        db.close();
-                    }
-
-                } else {
-                    // add stuff to add the word to favorite
-                    ///........
-                    // turn the image on
-                    favoriteImage.setImageResource(R.drawable.ic_favorite_on);
-                    // change favorite exist to false
-                    currentWord.setAddedToFavorite("true");
-                    ContentValues cv = new ContentValues();
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE, currentWord.getTangaleTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH,currentWord.getEnglishTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID,currentWord.getwordImageId() );
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
-
-                    db.update(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,cv, LearnTangaleContract.LearnTangaleEntry._ID + "=" + id,null);
-                }
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        });
             }
         });
 
