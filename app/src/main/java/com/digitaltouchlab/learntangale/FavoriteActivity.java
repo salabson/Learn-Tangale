@@ -99,6 +99,16 @@ public class FavoriteActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Cursor cursor = getFavoriteWords();
+        fillData(cursor);
+        // create custom adapter object and set expandable list view to it
+        WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
+        expLV.setAdapter(customAdapater);
+    }
+
     public Cursor getFavoriteWords() {
         Cursor cursor = null;
             //String[] selectionArgs = new String[]{"'%" + query + "%'"};
