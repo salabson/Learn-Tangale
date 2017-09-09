@@ -3,6 +3,7 @@ package com.digitaltouchlab.learntangale;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AlertDialog;
@@ -101,7 +102,7 @@ public class FavoriteCustomAdapter extends BaseExpandableListAdapter {
 
         // get reference to favorite image
         final ImageView deleteImage = (ImageView)convertView.findViewById(R.id.favoriteImage);
-            deleteImage.setImageResource(R.drawable.ic_favorite_on);
+            deleteImage.setImageResource(R.drawable.ic_delete);
 
 
 
@@ -135,6 +136,9 @@ public class FavoriteCustomAdapter extends BaseExpandableListAdapter {
                                 try{
                                     int z = db.update(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,cv, LearnTangaleContract.LearnTangaleEntry._ID + "=" + id,null);
                                     db.close();
+                                    Intent intent = new Intent(mContext,FavoriteActivity.class);
+                                    mContext.startActivity(intent);
+
                                     Log.v("WordAdapter", "update result " + z );
                                 }catch (Exception e){
                                     e.printStackTrace();

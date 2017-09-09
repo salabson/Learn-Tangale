@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -100,6 +101,13 @@ public class FavoriteActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        Log.v(this.getClass().getName(),"onPause call");
+
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
         Cursor cursor = getFavoriteWords();
@@ -107,6 +115,7 @@ public class FavoriteActivity extends AppCompatActivity {
         // create custom adapter object and set expandable list view to it
         FavoriteCustomAdapter customAdapater = new FavoriteCustomAdapter(this,childData,parentData);
         expLV.setAdapter(customAdapater);
+        Log.v(this.getClass().getName(),"Onresume call");
     }
 
     public Cursor getFavoriteWords() {
