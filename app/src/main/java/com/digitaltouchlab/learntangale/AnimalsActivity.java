@@ -132,7 +132,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
 
          Cursor cursor = db.query(LearnTangaleContract.WordEntry.TABLE_NAME,
                 null,
-                null,
+                 LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID+ "=" + 1,
                 null,
                 null,
                 null,

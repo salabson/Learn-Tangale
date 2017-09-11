@@ -16,7 +16,7 @@ public class Word {
 
 
     // define constructor
-    public Word(int id, String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId, String isAddedToFavorite,int categoryId) {
+    public Word(int id, String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId, String isAddedToFavorite) {
         this.id = id;
         this.tangaleTranlation = tangaleTranlation;
         this.englishTranlation = englishTranlation;
@@ -38,14 +38,7 @@ public class Word {
         return this.tangaleTranlation;
     }
 
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
 
-    public int getCategoryId() {
-
-        return this.categoryId;
-    }
 
     public String getEnglishTranlation() {
         return this.englishTranlation;
