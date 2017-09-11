@@ -12,16 +12,18 @@ public class Word {
     private String hausaTranlation;
     private int wordImageId;
     private String isAddedToFavorite;
+    private int categoryId;
 
 
     // define constructor
-    public Word(int id, String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId, String isAddedToFavorite) {
+    public Word(int id, String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId, String isAddedToFavorite,int categoryId) {
         this.id = id;
         this.tangaleTranlation = tangaleTranlation;
         this.englishTranlation = englishTranlation;
         this.hausaTranlation = hausaTranlation;
         this.wordImageId = wordImageId;
         this.isAddedToFavorite = isAddedToFavorite;
+        this.categoryId = categoryId;
 
     }
 
@@ -34,6 +36,15 @@ public class Word {
     }
     public String getTangaleTranlation() {
         return this.tangaleTranlation;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public int getCategoryId() {
+
+        return this.categoryId;
     }
 
     public String getEnglishTranlation() {
