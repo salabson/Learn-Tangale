@@ -11,8 +11,7 @@ public class WordCategory {
     private int categoryImageId;
 
     // define constructor and initialise member variables
-    public WordCategory(int categoryId, String categoryName, int categoryImageId) {
-        this.categoryId = categoryId;
+    public WordCategory(String categoryName, int categoryImageId) {
         this.categoryName = categoryName;
         this.categoryImageId = categoryImageId;
     }
