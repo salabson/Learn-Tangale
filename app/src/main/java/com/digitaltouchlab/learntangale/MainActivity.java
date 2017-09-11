@@ -2,6 +2,8 @@ package com.digitaltouchlab.learntangale;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.preference.PreferenceManager;
@@ -19,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private static final int COUNTING = 2;
     private static final int ENQUIRIES = 3;
     private static final int PHRASES= 4;
-
+    SQLiteDatabase db;
+    LearnTangaleDbHelper dbHelper;
 
     ArrayList<WordCategory> wordCategories;
     GridView categotyGV;
@@ -29,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        dbHelper = new LearnTangaleDbHelper(this);
+        db = dbHelper.getWritableDatabase();
         // get reference to gridviw from the main layout
         categotyGV = (GridView) findViewById(R.id.gridViewMain);
 
@@ -53,13 +57,25 @@ public class MainActivity extends AppCompatActivity {
 
     private void fillData() {
         wordCategories = new ArrayList<>();
-        wordCategories.add(new WordCategory("Animals", R.drawable.ic_animals));
-        wordCategories.add(new WordCategory("Family", R.drawable.family));
-        wordCategories.add(new WordCategory("Counting", R.drawable.numbers));
-        wordCategories.add(new WordCategory("Enquiries", R.drawable.question));
-        wordCategories.add(new WordCategory("Phrases", R.drawable.phrases));
-        wordCategories.add(new WordCategory("Time and Dates", R.drawable.time));
+        Cursor cursor = getAllCategories();
+        for (int i = 0; i < cursor.getCount(); i++) {
+            cursor.moveToPosition(i);
+            String name = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.CategoryEntry.COLUMN_NAME));
+            int image_id = cursor.getInt(cursor.getColumnIndex(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID));
+            wordCategories.add(new WordCategory(name, image_id));
 
+        }
+    }
+
+    private Cursor getAllCategories() {
+        Cursor cursor = null;
+        try {
+            cursor = db.query(LearnTangaleContract.CategoryEntry.TABLE_NAME, null, null, null, null, null, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return cursor;
     }
 
     private void loadAcivity(int index) {
