@@ -12,7 +12,7 @@ public class Word {
     private String hausaTranlation;
     private int wordImageId;
     private String isAddedToFavorite;
-    private int categoryId;
+
 
 
     // define constructor
@@ -23,7 +23,7 @@ public class Word {
         this.hausaTranlation = hausaTranlation;
         this.wordImageId = wordImageId;
         this.isAddedToFavorite = isAddedToFavorite;
-        this.categoryId = categoryId;
+
 
     }
 

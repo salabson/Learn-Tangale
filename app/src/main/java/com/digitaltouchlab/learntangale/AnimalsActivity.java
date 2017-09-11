@@ -98,6 +98,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
                 String hausa = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_HAUSA));
                 int imageId = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID));
                 String isAddedToFavorite = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE
+
                 ));
                 // create word object correspond to each row of cursor and add it word list
                 words.add(new Word(id,tangale, english, hausa, imageId, isAddedToFavorite));
