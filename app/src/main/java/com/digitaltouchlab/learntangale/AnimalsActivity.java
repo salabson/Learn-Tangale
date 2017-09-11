@@ -92,12 +92,13 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
                 // move cursor to specific row for reading
                 mCursor.moveToPosition(y);
                 // retrieve each column value of the cursor and store it in a variable
-                int id = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry._ID));
-                String tangale = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE));
-                String english = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH));
-                String hausa = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA));
-                int imageId = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID));
-                String isAddedToFavorite = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE));
+                int id = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.WordEntry._ID));
+                String tangale = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_TANGALE));
+                String english = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_ENGLISH));
+                String hausa = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_HAUSA));
+                int imageId = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID));
+                String isAddedToFavorite = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE
+                ));
                 // create word object correspond to each row of cursor and add it word list
                 words.add(new Word(id,tangale, english, hausa, imageId, isAddedToFavorite));
         }
@@ -128,7 +129,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
     // get all data from the db as cursor
     public Cursor getAllWords() {
 
-         Cursor cursor = db.query(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,
+         Cursor cursor = db.query(LearnTangaleContract.WordEntry.TABLE_NAME,
                 null,
                 null,
                 null,
