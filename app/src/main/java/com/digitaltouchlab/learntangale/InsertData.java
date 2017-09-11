@@ -14,7 +14,7 @@ import com.digitaltouchlab.learntangale.LearnTangaleContract;
  */
 
 public class InsertData {
-    public static void insertData(SQLiteDatabase db) {
+    public static void insertCategpryData(SQLiteDatabase db) {
         if(db == null) return;
 
        /* //initialize arraylist of words
@@ -29,63 +29,156 @@ public class InsertData {
         List<ContentValues> list = new ArrayList<ContentValues>();
 
         ContentValues cv = new ContentValues();
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE,"Bai");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Dog");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Kare");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.animals);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Animals");
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Animals");
+
         list.add(cv);
 
-         cv = new ContentValues();
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE,"Babba");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Monkey");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Jaki");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.donkey);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Babba");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Monkey");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Jaki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.donkey);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
         list.add(cv);
 
-         cv = new ContentValues();
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE,"Ankilin");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Lizard");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Kadangare");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.lizard);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
-        list.add(cv);
-
-
-         cv = new ContentValues();
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE,"Tuje");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Horse");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Doki");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.horse);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ankilin");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Lizard");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kadangare");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.lizard);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
         list.add(cv);
 
 
-         cv = new ContentValues();
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE,"Tanga");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Cow");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Shanu");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.cow);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Tuje");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Horse");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Doki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.horse);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
         list.add(cv);
 
 
-         cv = new ContentValues();
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE,"Andokko");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH, "Grasshopper");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA,"Fara");
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID, R.drawable.grassphopper);
-        cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Tanga");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Cow");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shanu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.cow);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Andokko");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Grasshopper");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Fara");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.grassphopper);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
         list.add(cv);
 
         try {
             db.beginTransaction();
             // clear db
-            db.delete(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,null,null);
+            db.delete(LearnTangaleContract.WordEntry.TABLE_NAME,null,null);
             // loop to insert data in the list
             for (ContentValues c : list) {
-                db.insert(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,null,c);
+                db.insert(LearnTangaleContract.WordEntry.TABLE_NAME,null,c);
+            }
+            db.setTransactionSuccessful();
+            db.endTransaction();
+
+        } catch (SQLException e) {
+        }finally {
+        }
+
+
+
+    }
+
+    public static void insertWordData(SQLiteDatabase db) {
+        if(db == null) return;
+
+       /* //initialize arraylist of words
+        words.add( new Word("Bai", "Dog", "Kare",R.drawable.animals, false));
+        words.add( new Word("Babba", "Donkey", "Jaki", R.drawable.donkey, true));
+        words.add( new Word("Ankilin", "Lizard", "Kadangare", R.drawable.lizard,false));
+        words.add( new Word("Tuje", "Horse", "Doki", R.drawable.horse,true));
+        words.add( new Word("Tanga", "Cow", "Shanu", R.drawable.cow, false));
+        words.add( new Word("Andokko", "Grasshopper", "Fara", R.drawable.grassphopper, true));*/
+
+        // list of data to be insert to db
+        List<ContentValues> list = new ArrayList<ContentValues>();
+
+        ContentValues cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Bai");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Dog");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kare");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.animals);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
+        list.add(cv);
+
+         cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Babba");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Monkey");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Jaki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.donkey);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
+        list.add(cv);
+
+         cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ankilin");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Lizard");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kadangare");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.lizard);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
+        list.add(cv);
+
+
+         cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Tuje");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Horse");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Doki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.horse);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
+        list.add(cv);
+
+
+         cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Tanga");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Cow");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shanu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.cow);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
+        list.add(cv);
+
+
+         cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Andokko");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Grasshopper");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Fara");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.grassphopper);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
+        list.add(cv);
+
+        try {
+            db.beginTransaction();
+            // clear db
+            db.delete(LearnTangaleContract.WordEntry.TABLE_NAME,null,null);
+            // loop to insert data in the list
+            for (ContentValues c : list) {
+                db.insert(LearnTangaleContract.WordEntry.TABLE_NAME,null,c);
             }
             db.setTransactionSuccessful();
             db.endTransaction();
