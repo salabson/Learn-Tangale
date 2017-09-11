@@ -30,6 +30,6 @@ public class WordCategory {
         this.categoryId = categoryId;
     }
 
-    
+
 
 }
