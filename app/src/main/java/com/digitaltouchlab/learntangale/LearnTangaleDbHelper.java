@@ -24,17 +24,27 @@ public class LearnTangaleDbHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        // create table to hold learn tangale data
-        final String SQL_CREATE_LEARN_TANGALE_TABLE = "CREATE TABLE " + LearnTangaleContract.LearnTangaleEntry.TABLE_NAME + " ("
-                 + LearnTangaleContract.LearnTangaleEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                 + LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE + " TEXT NOT NULL, "
-                 + LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH + " TEXT NOT NULL, "
-                 + LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA + " TEXT NOT NULL, "
-                 + LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID + " INT NOT NULL, "
-                 + LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE + " TEXT NOT NULL"
-                 + "); ";
+        final String SQL_CREATE_CATEGORY_TABLE = "CREATE TABLE " + LearnTangaleContract.CategoryEntry.TABLE_NAME + " ("
+                + LearnTangaleContract.CategoryEntry._ID+ " INTEGER PRIMARY KEY AUOTOINCREMENT, "
+                + LearnTangaleContract.CategoryEntry.COLUMN_NAME+ " TEXT NOT NULL, "
+                + LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID+ "TEXT NOT NULL,"
+                + "); ";
+
+        // create table to hold words data
+        final String SQL_CREATE_WORD_TABLE = "CREATE TABLE " + LearnTangaleContract.WordEntry.TABLE_NAME + " ("
+                 + LearnTangaleContract.WordEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                 + LearnTangaleContract.WordEntry.COLUMN_TANGALE + " TEXT NOT NULL, "
+                 + LearnTangaleContract.WordEntry.COLUMN_ENGLISH + " TEXT NOT NULL, "
+                 + LearnTangaleContract.WordEntry.COLUMN_HAUSA + " TEXT NOT NULL, "
+                 + LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID + " INT NOT NULL, "
+                 + LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE + " TEXT NOT NULL, "
+                 + LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID + " INT NOT NULL, "
+                 + "FOREIGN KEY"+"("+LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID+") "
+                 + "REFERENCES "+ LearnTangaleContract.CategoryEntry.TABLE_NAME
+                 + "("+ LearnTangaleContract.CategoryEntry._ID+"); ";
         // execute  the query against Db
-        sqLiteDatabase.execSQL(SQL_CREATE_LEARN_TANGALE_TABLE);
+        sqLiteDatabase.execSQL(SQL_CREATE_CATEGORY_TABLE);
+        sqLiteDatabase.execSQL(SQL_CREATE_WORD_TABLE);
 
 
 
@@ -46,7 +56,8 @@ public class LearnTangaleDbHelper extends SQLiteOpenHelper{
         // DATABASE_VERSION the table will be dropped.
         // In a production app, this method might be modified to ALTER the table
         // instead of dropping it, so that existing data is not deleted.
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + LearnTangaleContract.LearnTangaleEntry.TABLE_NAME);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + LearnTangaleContract.CategoryEntry.TABLE_NAME);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + LearnTangaleContract.WordEntry.TABLE_NAME);
         onCreate(sqLiteDatabase);
 
 
