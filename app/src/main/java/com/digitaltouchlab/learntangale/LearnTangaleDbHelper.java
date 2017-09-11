@@ -25,9 +25,9 @@ public class LearnTangaleDbHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         final String SQL_CREATE_CATEGORY_TABLE = "CREATE TABLE " + LearnTangaleContract.CategoryEntry.TABLE_NAME + " ("
-                + LearnTangaleContract.CategoryEntry._ID+ " INTEGER PRIMARY KEY AUOTOINCREMENT, "
+                + LearnTangaleContract.CategoryEntry._ID+ " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + LearnTangaleContract.CategoryEntry.COLUMN_NAME+ " TEXT NOT NULL, "
-                + LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID+ "TEXT NOT NULL,"
+                + LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID+ "TEXT NOT NULL"
                 + "); ";
 
         // create table to hold words data
