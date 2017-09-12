@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         InsertData.insertCategpryData(db);
         InsertData.insertWordData(db);
-        
+
         // get reference to gridviw from the main layout
         categotyGV = (GridView) findViewById(R.id.gridViewMain);
 

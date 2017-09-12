@@ -16,7 +16,7 @@ public class LearnTangaleDbHelper extends SQLiteOpenHelper{
     private static final String DATABASE_NAME = "learntangale.db";
 
     // If you change the database schema, you must increment the database version
-    private final static int  DATABASE_VERSION = 2;
+    private final static int  DATABASE_VERSION = 4;
 
     public LearnTangaleDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -27,7 +27,7 @@ public class LearnTangaleDbHelper extends SQLiteOpenHelper{
         final String SQL_CREATE_CATEGORY_TABLE = "CREATE TABLE " + LearnTangaleContract.CategoryEntry.TABLE_NAME + " ("
                 + LearnTangaleContract.CategoryEntry._ID+ " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + LearnTangaleContract.CategoryEntry.COLUMN_NAME+ " TEXT NOT NULL, "
-                + LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID+ "TEXT NOT NULL"
+                + LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID+ " TEXT NOT NULL"
                 + "); ";
 
         // create table to hold words data
@@ -41,7 +41,7 @@ public class LearnTangaleDbHelper extends SQLiteOpenHelper{
                  + LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID + " INT NOT NULL, "
                  + "FOREIGN KEY"+"("+LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID+") "
                  + "REFERENCES "+ LearnTangaleContract.CategoryEntry.TABLE_NAME
-                 + "("+ LearnTangaleContract.CategoryEntry._ID+"); ";
+                 + "("+ LearnTangaleContract.CategoryEntry._ID+")); ";
         // execute  the query against Db
         sqLiteDatabase.execSQL(SQL_CREATE_CATEGORY_TABLE);
         sqLiteDatabase.execSQL(SQL_CREATE_WORD_TABLE);

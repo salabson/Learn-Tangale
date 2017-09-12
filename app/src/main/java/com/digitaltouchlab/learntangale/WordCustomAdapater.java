@@ -137,16 +137,16 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
                     currentWord.setAddedToFavorite("false");
 
                     ContentValues cv = new ContentValues();
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE, currentWord.getTangaleTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH,currentWord.getEnglishTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID,currentWord.getwordImageId() );
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
+                    cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE, currentWord.getTangaleTranlation());
+                    cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,currentWord.getEnglishTranlation());
+                    cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
+                    cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,currentWord.getwordImageId() );
+                    cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
                     Log.v("WordAdapter", id + " " + currentWord.getIsAddedToFavorit() );
 
 
                     try{
-                        int z = db.update(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,cv, LearnTangaleContract.LearnTangaleEntry._ID + "=" + id,null);
+                        int z = db.update(LearnTangaleContract.WordEntry.TABLE_NAME,cv, LearnTangaleContract.WordEntry._ID + "=" + id,null);
                         db.close();
                         Log.v("WordAdapter", "update result " + z );
                     }catch (Exception e){
@@ -162,13 +162,13 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
                     // change favorite exist to false
                     currentWord.setAddedToFavorite("true");
                     ContentValues cv = new ContentValues();
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_TANGALE, currentWord.getTangaleTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_ENGLISH,currentWord.getEnglishTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IMAGEID,currentWord.getwordImageId() );
-                    cv.put(LearnTangaleContract.LearnTangaleEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
+                    cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE, currentWord.getTangaleTranlation());
+                    cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,currentWord.getEnglishTranlation());
+                    cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
+                    cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,currentWord.getwordImageId() );
+                    cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
 
-                    db.update(LearnTangaleContract.LearnTangaleEntry.TABLE_NAME,cv, LearnTangaleContract.LearnTangaleEntry._ID + "=" + id,null);
+                    db.update(LearnTangaleContract.WordEntry.TABLE_NAME,cv, LearnTangaleContract.WordEntry._ID + "=" + id,null);
                 }
             }
         });
