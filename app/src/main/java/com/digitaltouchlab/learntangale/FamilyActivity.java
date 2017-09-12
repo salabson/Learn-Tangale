@@ -85,7 +85,7 @@ public class FamilyActivity extends AppCompatActivity implements  SharedPreferen
             int categoryId = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID));
 
             // create word object correspond to each row of cursor and add it word list
-            words.add(new Word(id, tangale, english, hausa, imageId, isAddedToFavorite));
+            words.add(new Word(id, tangale, english, hausa, imageId, isAddedToFavorite,categoryId));
         }
 
         // create variable that hold each word

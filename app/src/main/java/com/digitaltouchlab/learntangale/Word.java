@@ -17,13 +17,14 @@ public class Word {
 
 
     // define constructor
-    public Word(int id, String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId, String isAddedToFavorite) {
+    public Word(int id, String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId, String isAddedToFavorite, int categoryId) {
         this.id = id;
         this.tangaleTranlation = tangaleTranlation;
         this.englishTranlation = englishTranlation;
         this.hausaTranlation = hausaTranlation;
         this.wordImageId = wordImageId;
         this.isAddedToFavorite = isAddedToFavorite;
+        this.categoryId =categoryId;
 
 
     }
