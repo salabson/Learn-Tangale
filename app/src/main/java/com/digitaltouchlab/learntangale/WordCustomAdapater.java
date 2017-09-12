@@ -142,6 +142,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
                     cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
                     cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,currentWord.getwordImageId() );
                     cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
+                    cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,currentWord.getCategoryId());
                     Log.v("WordAdapter", id + " " + currentWord.getIsAddedToFavorit() );
 
 

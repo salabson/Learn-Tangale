@@ -12,6 +12,7 @@ public class Word {
     private String hausaTranlation;
     private int wordImageId;
     private String isAddedToFavorite;
+    private int categoryId;
 
 
 
@@ -56,6 +57,10 @@ public class Word {
         return isAddedToFavorite;
     }
 
+    public int getCategoryId() {
+        return categoryId;
+    }
+
     // define setters
     public void setTangaleTranlation(String tangaleTranlation) {
         this.tangaleTranlation = tangaleTranlation;
@@ -75,5 +80,9 @@ public class Word {
 
     public void setAddedToFavorite(String addedToFavorite) {
         isAddedToFavorite = addedToFavorite;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 }
