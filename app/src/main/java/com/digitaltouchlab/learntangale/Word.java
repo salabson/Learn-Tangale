@@ -28,6 +28,17 @@ public class Word {
 
 
     }
+    public Word(int id, String tangaleTranlation, String englishTranlation, String hausaTranlation, int wordImageId, String isAddedToFavorite) {
+        this.id = id;
+        this.tangaleTranlation = tangaleTranlation;
+        this.englishTranlation = englishTranlation;
+        this.hausaTranlation = hausaTranlation;
+        this.wordImageId = wordImageId;
+        this.isAddedToFavorite = isAddedToFavorite;
+
+
+
+    }
 
     public Word() {
     }

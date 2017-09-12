@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         dbHelper = new LearnTangaleDbHelper(this);
         db = dbHelper.getWritableDatabase();
 
-        InsertData.insertCategpryData(db);
-       InsertData.insertWordData(db);
+        //InsertData.insertCategpryData(db);
+      // InsertData.insertWordData(db);
 
         // get reference to gridviw from the main layout
         categotyGV = (GridView) findViewById(R.id.gridViewMain);
