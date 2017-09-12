@@ -152,6 +152,63 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
         list.add(cv);
 
+         cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Teh");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Father");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Baba");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_father);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,2);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ne");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Mother");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Mama");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_mother);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,2);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Shiji");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Grandfather");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kaka namiji");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_grandfather);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,2);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kaaga");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Grandmother");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kaka namace");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_grandmother);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,2);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Man");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Namiji");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_man);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,2);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Worop");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Mowan");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Mace");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_woman);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,2);
+        list.add(cv);
+
         try {
             db.beginTransaction();
             // clear db
