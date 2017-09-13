@@ -109,6 +109,17 @@ public class DatabaseUtils {
         return cursor;
     }
 
+    private Cursor getAllCategories() {
+        Cursor cursor = null;
+        try {
+            cursor = mDb.query(LearnTangaleContract.CategoryEntry.TABLE_NAME, null, null, null, null, null, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return cursor;
+    }
+
 }
 
 
