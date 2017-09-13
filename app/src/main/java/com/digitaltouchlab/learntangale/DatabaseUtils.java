@@ -1,6 +1,7 @@
 package com.digitaltouchlab.learntangale;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 /**
@@ -26,4 +27,20 @@ public class DatabaseUtils {
     public void Close() {
         mDbHelper.close();
     }
+
+    public Cursor getAllword() {
+        Cursor cursor = mDb.query(LearnTangaleContract.WordEntry.TABLE_NAME,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null);
+
+        return cursor;
+
+    }
+
+
 }
