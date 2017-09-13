@@ -76,12 +76,30 @@ public class DatabaseUtils {
         return cursor;
     }
 
-    // get all data from the db as cursor
+    // get all data by category from the db as cursor
     public Cursor getWordsByCategory(long mCategoryId) {
 
         Cursor cursor = mDb.query(LearnTangaleContract.WordEntry.TABLE_NAME,
                 null,
                 LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID+ "=" + mCategoryId,
+                null,
+                null,
+                null,
+                null,
+                null);
+
+        return cursor;
+    }
+
+
+    // get words added to the favorites
+    public Cursor getFavoriteWords() {
+        Cursor cursor = null;
+        //String[] selectionArgs = new String[]{"'%" + query + "%'"};
+        String selectionByFavorite = LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE + " ='true'" ;
+        cursor = mDb.query(LearnTangaleContract.WordEntry.TABLE_NAME,
+                null,
+                selectionByFavorite,
                 null,
                 null,
                 null,
