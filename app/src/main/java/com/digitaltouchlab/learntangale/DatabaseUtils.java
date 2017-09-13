@@ -76,6 +76,20 @@ public class DatabaseUtils {
         return cursor;
     }
 
+    // get all data from the db as cursor
+    public Cursor getWordsByCategory(long mCategoryId) {
+
+        Cursor cursor = mDb.query(LearnTangaleContract.WordEntry.TABLE_NAME,
+                null,
+                LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID+ "=" + mCategoryId,
+                null,
+                null,
+                null,
+                null,
+                null);
+
+        return cursor;
+    }
 
 }
 
