@@ -17,5 +17,13 @@ public class DatabaseUtils {
     }
 
 
-    
+    public DatabaseUtils Open() {
+        mDbHelper = new LearnTangaleDbHelper(mContext);
+        mDb = mDbHelper.getReadableDatabase();
+        return this;
+    }
+
+    public void Close() {
+        mDbHelper.close();
+    }
 }
