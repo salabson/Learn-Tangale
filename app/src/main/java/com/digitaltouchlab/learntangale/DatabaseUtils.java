@@ -1,10 +1,12 @@
 package com.digitaltouchlab.learntangale;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.preference.PreferenceManager;
+import android.util.Log;
 
 /**
  * Created by salabs on 13/09/2017.
@@ -109,6 +111,7 @@ public class DatabaseUtils {
         return cursor;
     }
 
+    // return all categories
     private Cursor getAllCategories() {
         Cursor cursor = null;
         try {
@@ -118,6 +121,26 @@ public class DatabaseUtils {
         }
 
         return cursor;
+    }
+
+    public void updateWordById(long id, String tangale, String english, String hausa, int imageId, String addedToFavorite, int categoryId) {
+        ContentValues cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,tangale);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,english);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,hausa);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,imageId);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE,addedToFavorite);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,categoryId);
+        try{
+            int z = mDb.update(LearnTangaleContract.WordEntry.TABLE_NAME,cv, LearnTangaleContract.WordEntry._ID + "=" + id,null);
+            mDb.close();
+            Log.v("WordAdapter", "update result " + z );
+        }catch (Exception e){
+            e.printStackTrace();
+            mDb.close();
+        }
+
+
     }
 
 }
