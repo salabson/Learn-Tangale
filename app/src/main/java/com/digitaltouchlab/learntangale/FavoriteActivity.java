@@ -121,5 +121,5 @@ public class FavoriteActivity extends AppCompatActivity {
         Log.v(this.getClass().getName(),"Onresume call");
     }
 
-    
+
 }
