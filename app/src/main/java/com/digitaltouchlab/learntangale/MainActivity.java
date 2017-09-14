@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int PHRASES= 4;
     SQLiteDatabase db;
     LearnTangaleDbHelper dbHelper;
+    DatabaseUtils mDbUtils;
 
     ArrayList<WordCategory> wordCategories;
     GridView categotyGV;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         dbHelper = new LearnTangaleDbHelper(this);
         db = dbHelper.getWritableDatabase();
+        mDbUtils = new DatabaseUtils(this);
 
         //InsertData.insertCategpryData(db);
       // InsertData.insertWordData(db);
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         categotyGV = (GridView) findViewById(R.id.gridViewMain);
 
         // call fill data method tp populate word category array list
+        mDbUtils.Open();
         fillData();
 
         // gridiew adapter to our custom adapter
@@ -61,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void fillData() {
         wordCategories = new ArrayList<>();
-        Cursor cursor = getAllCategories();
+        Cursor cursor = mDbUtils.getAllCategories();
         for (int i = 0; i < cursor.getCount(); i++) {
             cursor.moveToPosition(i);
             String name = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.CategoryEntry.COLUMN_NAME));
@@ -71,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private Cursor getAllCategories() {
+   /* private Cursor getAllCategories() {
         Cursor cursor = null;
         try {
             cursor = db.query(LearnTangaleContract.CategoryEntry.TABLE_NAME, null, null, null, null, null, null);
@@ -81,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         return cursor;
     }
-
+*/
     private void loadAcivity(int index) {
         Intent startActivityIntent = null;
         switch (index) {

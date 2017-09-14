@@ -12,12 +12,12 @@ import android.util.Log;
  * Created by salabs on 13/09/2017.
  */
 
-public class DatabaseUtils {
+public  class DatabaseUtils {
     private LearnTangaleDbHelper mDbHelper;
     private SQLiteDatabase mDb;
     private Context mContext;
 
-    private DatabaseUtils(Context mContext) {
+    public DatabaseUtils(Context mContext) {
         this.mContext = mContext;
     }
 
@@ -112,7 +112,7 @@ public class DatabaseUtils {
     }
 
     // return all categories
-    private Cursor getAllCategories() {
+    public  Cursor getAllCategories() {
         Cursor cursor = null;
         try {
             cursor = mDb.query(LearnTangaleContract.CategoryEntry.TABLE_NAME, null, null, null, null, null, null);
