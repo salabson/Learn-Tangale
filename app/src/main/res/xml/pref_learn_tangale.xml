@@ -8,6 +8,13 @@
     android:key="@string/pref_translation_key"
     android:title="Translation language"
     />
+    <CheckBoxPreference
+        android:defaultValue="checked"
+        android:summaryOn="@string/pref_summary_on"
+        android:summaryOff="@string/pref_summary_off"
+        android:title="@string/pref_show_image_title"
+        android:key="@string/pref_show_image_key"
+        />
 
 
 </PreferenceScreen>
