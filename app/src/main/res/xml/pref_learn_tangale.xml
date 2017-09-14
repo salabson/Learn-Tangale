@@ -9,7 +9,7 @@
     android:title="Translation language"
     />
     <CheckBoxPreference
-        android:defaultValue="checked"
+        android:defaultValue="@bool/show_image_default"
         android:summaryOn="@string/pref_summary_on"
         android:summaryOff="@string/pref_summary_off"
         android:title="@string/pref_show_image_title"
