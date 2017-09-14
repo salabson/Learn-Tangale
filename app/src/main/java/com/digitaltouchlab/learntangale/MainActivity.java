@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dbHelper = new LearnTangaleDbHelper(this);
-        db = dbHelper.getWritableDatabase();
         mDbUtils = new DatabaseUtils(this);
 
         //InsertData.insertCategpryData(db);
@@ -74,17 +72,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-   /* private Cursor getAllCategories() {
-        Cursor cursor = null;
-        try {
-            cursor = db.query(LearnTangaleContract.CategoryEntry.TABLE_NAME, null, null, null, null, null, null);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return cursor;
-    }
-*/
     private void loadAcivity(int index) {
         Intent startActivityIntent = null;
         switch (index) {

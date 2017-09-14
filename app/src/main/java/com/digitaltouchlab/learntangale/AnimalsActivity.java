@@ -37,6 +37,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
     // no item selected for the parent list view for the first time
    private int lastSelectedItem = -1;
     // database  access variables
+    DatabaseUtils mDbUtils;
      SQLiteDatabase db;
      LearnTangaleDbHelper dbHelper;
 
@@ -46,8 +47,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word);
 
-        dbHelper = new LearnTangaleDbHelper(this);
-        db = dbHelper.getWritableDatabase();
+        mDbUtils = new DatabaseUtils(this);
 
 
         // make reference to expandable listview
@@ -58,6 +58,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
         expLV.setDividerHeight(1);
 
         // call method that populate parent and child data
+        mDbUtils.Open();
         fillData();
 
         // create custom adapter object and set expandable list view to it
@@ -85,7 +86,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
         childData = new HashMap<>();
         words = new ArrayList<>();
         // call to method that return all words the db
-        Cursor mCursor = getAllWords();
+        Cursor mCursor = mDbUtils.getWordsByCategory(1);
 
         //iterate through the cursor to initialize the arraylist of words
         for (int y = 0; y < mCursor.getCount(); y++) {
@@ -127,20 +128,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
 
     }
 
-    // get all data from the db as cursor
-    public Cursor getAllWords() {
 
-         Cursor cursor = db.query(LearnTangaleContract.WordEntry.TABLE_NAME,
-                null,
-                 LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID+ "=" + 1,
-                null,
-                null,
-                null,
-                null,
-                null);
-
-        return cursor;
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
