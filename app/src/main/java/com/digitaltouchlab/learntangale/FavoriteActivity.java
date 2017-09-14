@@ -23,6 +23,7 @@ public class FavoriteActivity extends AppCompatActivity {
     // no item selected for the parent list view for the first time
     private int lastSelectedItem = -1;
     // database  access variables
+    DatabaseUtils mDbUtils;
     SQLiteDatabase db;
     LearnTangaleDbHelper dbHelper;
 
@@ -32,6 +33,7 @@ public class FavoriteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_word);
         dbHelper = new LearnTangaleDbHelper(this);
         db = dbHelper.getWritableDatabase();
+        mDbUtils = new DatabaseUtils(this);
 
 
         // make reference to expandable listview
@@ -42,7 +44,8 @@ public class FavoriteActivity extends AppCompatActivity {
         expLV.setDividerHeight(1);
 
         // call method that populate parent and child data
-        Cursor cursor = getFavoriteWords();
+        mDbUtils.Open();
+        Cursor cursor = mDbUtils.getFavoriteWords();
         fillData(cursor);
 
         // create custom adapter object and set expandable list view to it
@@ -110,7 +113,7 @@ public class FavoriteActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Cursor cursor = getFavoriteWords();
+        Cursor cursor = mDbUtils.getFavoriteWords();
         fillData(cursor);
         // create custom adapter object and set expandable list view to it
         FavoriteCustomAdapter customAdapater = new FavoriteCustomAdapter(this,childData,parentData);
@@ -118,19 +121,5 @@ public class FavoriteActivity extends AppCompatActivity {
         Log.v(this.getClass().getName(),"Onresume call");
     }
 
-    public Cursor getFavoriteWords() {
-        Cursor cursor = null;
-            //String[] selectionArgs = new String[]{"'%" + query + "%'"};
-            String selectionByFavorite = LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE + " ='true'" ;
-            cursor = db.query(LearnTangaleContract.WordEntry.TABLE_NAME,
-                    null,
-                    selectionByFavorite,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null);
-
-        return cursor;
-    }
+    
 }
