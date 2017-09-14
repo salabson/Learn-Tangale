@@ -33,7 +33,7 @@ public class FamilyActivity extends AppCompatActivity implements  SharedPreferen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word);
 
-        
+
         mDbUtils = new DatabaseUtils(this);
 
 

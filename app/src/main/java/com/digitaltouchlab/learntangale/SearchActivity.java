@@ -34,6 +34,7 @@ public class SearchActivity extends AppCompatActivity {
     // no item selected for the parent list view for the first time
     private int lastSelectedItem = -1;
     // database  access variables
+    DatabaseUtils mDbUtils;
     SQLiteDatabase db;
     LearnTangaleDbHelper dbHelper;
 
@@ -47,6 +48,7 @@ public class SearchActivity extends AppCompatActivity {
 
         dbHelper = new LearnTangaleDbHelper(this);
         db = dbHelper.getWritableDatabase();
+         mDbUtils = new DatabaseUtils(this);
 
 
         // make reference to expandable listview
@@ -57,7 +59,8 @@ public class SearchActivity extends AppCompatActivity {
         expLV.setDividerHeight(1);
 
         // call method that populate parent and child data
-        Cursor mCursor = getAllWords();
+        mDbUtils.Open();
+        Cursor mCursor = mDbUtils.getAllword();
         fillData(mCursor);
 
         // create custom adapter object and set expandable list view to it
@@ -88,7 +91,7 @@ public class SearchActivity extends AppCompatActivity {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
 
-            Cursor cursor = getWordsByQueryString(query);
+            Cursor cursor = mDbUtils.getWordsByQueryString(query);
             fillData(cursor);
             WordCustomAdapater customAdapater = new WordCustomAdapater(this, childData, parentData);
             expLV.setAdapter(customAdapater);
@@ -131,13 +134,13 @@ public class SearchActivity extends AppCompatActivity {
             public boolean onQueryTextChange(String newText) {
                 // load all data from the Db if searchview is empty
                 if (TextUtils.isEmpty(newText) || newText.length() == 0) {
-                    Cursor cursor = getAllWords();
+                    Cursor cursor = mDbUtils.getAllword();
                     fillData(cursor);
                     WordCustomAdapater customAdapater = new WordCustomAdapater(SearchActivity.this, childData, parentData);
                     expLV.setAdapter(customAdapater);
                     // load all data from the Db based on searchview string
                 } else {
-                    Cursor cursor = getWordsByQueryString(newText);
+                    Cursor cursor = mDbUtils.getWordsByQueryString(newText);
                     fillData(cursor);
                     WordCustomAdapater customAdapater = new WordCustomAdapater(SearchActivity.this, childData, parentData);
                     expLV.setAdapter(customAdapater);
@@ -217,51 +220,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
 
-    // get all data from the db as cursor
-    public Cursor getAllWords() {
 
-        Cursor cursor = db.query(LearnTangaleContract.WordEntry.TABLE_NAME,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null);
-
-        return cursor;
-    }
-    // get selected data from db based on searchView query string
-    public Cursor getWordsByQueryString(String query) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String transLanguage = prefs.getString(getString(R.string.pref_translation_key),getString(R.string.pref_english_translation_value));
-         Cursor cursor = null;
-        // query db by english column
-        if (transLanguage.equals(getString(R.string.pref_english_translation_value))) {
-            //String[] selectionArgs = new String[]{"'%" + query + "%'"};
-            String selectionByEnglish = LearnTangaleContract.WordEntry.COLUMN_ENGLISH + " LIKE " + "'%" + query + "%'" ;
-             cursor = db.query(true,LearnTangaleContract.WordEntry.TABLE_NAME,
-                    null,
-                    selectionByEnglish,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null);
-        //  query db by hausa column
-        } else if (transLanguage.equals(getString(R.string.pref_hausa_translation_value))) {
-             String selectionByHausa = LearnTangaleContract.WordEntry.COLUMN_HAUSA + " LIKE " + "'%" + query + "%'" ;
-             cursor = db.query(true,LearnTangaleContract.WordEntry.TABLE_NAME,
-                    null,
-                    selectionByHausa,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null);
-        }
-        return cursor;
-    }
 
 
 }
