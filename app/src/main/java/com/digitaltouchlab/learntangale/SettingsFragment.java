@@ -25,8 +25,12 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
         int count = prefScreen.getPreferenceCount();
         for (int i = 0; i < count; i++) {
             Preference p = prefScreen.getPreference(i);
-            String value = sharedPreferences.getString(p.getKey(),"");
-            setPreferencesSummary(p,value);
+            if (null != p) {
+                if (!(p instanceof CheckBoxPreference)) {
+                    String value =  sharedPreferences.getString(p.getKey(),"");
+                    setPreferencesSummary(p,value);
+                }
+            }
 
         }
 

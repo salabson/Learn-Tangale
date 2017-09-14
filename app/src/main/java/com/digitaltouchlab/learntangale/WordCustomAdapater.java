@@ -25,6 +25,8 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
     List<Word> listParentData;
     HashMap<String, List<Word>>  listChildData;
     Word currentWord;
+    SharedPreferences sharedPreferences;
+    public  ImageView  parentImage;
 
     public WordCustomAdapater(Context mContext, HashMap<String, List<Word>> listChildData, List<Word> listParentData ) {
         this.mContext = mContext;
@@ -82,7 +84,7 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
         // get reference of parent textview
         TextView parentText = (TextView) convertView.findViewById(R.id.txtParent);
         // get all share preferences
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
+         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
         String translationLanguage;
         // read the share preferences by key and  assign to variable
         translationLanguage = sharedPreferences.getString(mContext.getString(R.string.pref_translation_key),mContext.getString(R.string.pref_hausa_translation_value));
@@ -175,8 +177,17 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
         });
 
         // get reference to parent word image
-        ImageView  parentImage = (ImageView)convertView.findViewById(R.id.wordImage);
-        parentImage.setImageResource(currentWord.getwordImageId());
+           parentImage = (ImageView)convertView.findViewById(R.id.wordImage);
+        //retrieve the value of show iamge checkbox from the sharesprefences
+        boolean showImage;
+        showImage = sharedPreferences.getBoolean(mContext.getString(R.string.pref_show_image_key),mContext.getResources().getBoolean(R.bool.show_image_default));
+       // if the value of checkbox is true in shared preferences display image otherwise hide the image
+        if (showImage) {
+            parentImage.setImageResource(currentWord.getwordImageId());
+        } else {
+            parentImage.setVisibility(View.GONE);
+        }
+
 
         // return the for display on expandable list view
         return convertView;

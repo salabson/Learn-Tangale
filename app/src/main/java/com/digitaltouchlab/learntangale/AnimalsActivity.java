@@ -182,6 +182,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
 
         // create custom adapter object and set expandable list view to it
         WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
+       
 
     }
 }
