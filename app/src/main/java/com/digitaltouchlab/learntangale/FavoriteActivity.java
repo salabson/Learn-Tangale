@@ -3,11 +3,13 @@ package com.digitaltouchlab.learntangale;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -129,5 +131,14 @@ public class FavoriteActivity extends AppCompatActivity {
         Log.v(this.getClass().getName(),"Onresume call");
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        // When the home button is pressed, take the user back to the VisualizerActivity
+        if (id == android.R.id.home) {
+            NavUtils.navigateUpFromSameTask(this);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }
