@@ -54,7 +54,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
         expLV = new ExpandableListView(this);
         expLV = (ExpandableListView)findViewById(R.id.exp_lv);
         expLV.setGroupIndicator(null);
-        expLV.setDivider(getResources().getDrawable(R.color.black));
+        expLV.setDivider(getResources().getDrawable(R.color.lightGray));
         expLV.setDividerHeight(1);
 
         // call method that populate parent and child data
