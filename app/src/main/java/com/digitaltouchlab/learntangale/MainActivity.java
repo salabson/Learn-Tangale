@@ -4,20 +4,34 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.NavUtils;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.preference.PreferenceManager;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
+    // variables related to Navigation Drawer
+    private DrawerLayout mDrawer;
+    private Toolbar mToolbar;
+    private NavigationView mNavView;
+    private ActionBarDrawerToggle mActionBarDrawerToggle;
+
+
+
     // create constants that represent index various categories in array list
     private static final int ANIMALS = 0;
     private static final int FAMILY = 1;
@@ -35,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mToolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        initNavigationDrawer();
 
         ActionBar actionBar = this.getSupportActionBar();
         // Set the action bar back button to look like an up button
@@ -104,6 +121,35 @@ public class MainActivity extends AppCompatActivity {
         startActivity(startActivityIntent);
     }
 
+    private void initNavigationDrawer() {
+        mNavView = (NavigationView)findViewById(R.id.navView);
+        mNavView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                return false;
+            }
+        });
+
+        // find the header layout and set it views
+        View header = mNavView.getHeaderView(0);
+        TextView tv_email = (TextView) header.findViewById(R.id.tv_email);
+        tv_email.setText("salabson4@yahoo.co.uk");
+
+        // set and wire ActionBarDrawerToggle
+        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer){
+            @Override
+            public void onDrawerClosed(View v){
+                super.onDrawerClosed(v);
+            }
+
+            @Override
+            public void onDrawerOpened(View v) {
+                super.onDrawerOpened(v);
+            }
+        };
+        mDrawer.addDrawerListener(mActionBarDrawerToggle);
+        mActionBarDrawerToggle.syncState();
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();

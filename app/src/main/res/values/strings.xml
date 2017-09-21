@@ -24,6 +24,8 @@
     <string name="delete_title"> Delete favorites</string>
 
     <!-- string resource for navigation drawer -->
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
     <string name="nav_home">Home</string>
     <string name="nav_favorites">Favorites</string>
     <string name="nav_settings">Settings</string>
