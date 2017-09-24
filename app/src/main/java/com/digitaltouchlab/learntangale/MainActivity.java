@@ -154,6 +154,18 @@ public class MainActivity extends AppCompatActivity {
         mActionBarDrawerToggle.syncState();
     }
     @Override
+    protected void onPause() {
+        super.onPause();
+        mDbUtils.Close();
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mDbUtils.Open();
+
+    }
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         // When the home button is pressed, take the user back to the VisualizerActivity

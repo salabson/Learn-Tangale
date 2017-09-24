@@ -121,13 +121,14 @@ public class FavoriteActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.v(this.getClass().getName(),"onPause call");
+        mDbUtils.Open();
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        mDbUtils.Open();
         Cursor cursor = mDbUtils.getFavoriteWords();
         fillData(cursor);
         // create custom adapter object and set expandable list view to it

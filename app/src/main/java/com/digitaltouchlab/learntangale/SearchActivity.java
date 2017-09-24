@@ -172,8 +172,18 @@ public class SearchActivity extends AppCompatActivity {
 
         return true;
     }
-
     @Override
+    protected void onPause() {
+        super.onPause();
+        mDbUtils.Close();
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mDbUtils.Open();
+    }
+        @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:

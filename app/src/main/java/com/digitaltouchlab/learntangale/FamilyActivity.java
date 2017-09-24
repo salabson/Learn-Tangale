@@ -137,14 +137,19 @@ public class FamilyActivity extends AppCompatActivity implements  SharedPreferen
     }
 
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mDbUtils.Close();
 
+    }
 
     @Override
     protected void onResume() {
         super.onResume();
         PreferenceManager.getDefaultSharedPreferences(this)
                 .registerOnSharedPreferenceChangeListener(this);
-
+        mDbUtils.Open();
         fillData();
         WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
         expLV.setAdapter(customAdapater);
