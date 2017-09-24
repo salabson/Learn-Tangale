@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.preference.PreferenceManager;
 import android.support.v7.widget.SearchView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,12 +41,17 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
     DatabaseUtils mDbUtils;
      SQLiteDatabase db;
      LearnTangaleDbHelper dbHelper;
+    private Toolbar mToolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word);
+        mToolbar = (Toolbar)findViewById(R.id.toolbar1);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         mDbUtils = new DatabaseUtils(this);
 

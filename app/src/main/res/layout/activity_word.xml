@@ -4,9 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.digitaltouchlab.learntangale.AnimalsActivity"
     android:background="@color/white">
-<ExpandableListView
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimaryDark"/>
+
+    <ExpandableListView
     android:id="@+id/exp_lv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"

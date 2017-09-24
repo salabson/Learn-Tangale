@@ -15,6 +15,7 @@ import com.digitaltouchlab.learntangale.LearnTangaleContract;
 
 public class InsertData {
     public static void insertCategpryData(SQLiteDatabase db) {
+
         if(db == null) return;
 
        /* //initialize arraylist of words

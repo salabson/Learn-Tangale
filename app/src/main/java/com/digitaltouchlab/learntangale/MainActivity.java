@@ -31,15 +31,15 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mActionBarDrawerToggle;
 
 
-
+    private LearnTangaleDbHelper mDbHelper;
+    private SQLiteDatabase mDb;
     // create constants that represent index various categories in array list
     private static final int ANIMALS = 0;
     private static final int FAMILY = 1;
     private static final int COUNTING = 2;
     private static final int ENQUIRIES = 3;
     private static final int PHRASES= 4;
-    SQLiteDatabase db;
-    LearnTangaleDbHelper dbHelper;
+
     DatabaseUtils mDbUtils;
 
     ArrayList<WordCategory> wordCategories;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mToolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
-        initNavigationDrawer();
+
 
         ActionBar actionBar = this.getSupportActionBar();
         // Set the action bar back button to look like an up button
@@ -60,9 +60,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mDbUtils = new DatabaseUtils(this);
-
-        //InsertData.insertCategpryData(db);
-      // InsertData.insertWordData(db);
+       // mDbHelper = new LearnTangaleDbHelper(this);
+       // mDb = mDbHelper.getWritableDatabase();
+        //InsertData.insertCategpryData(mDb);
+      //InsertData.insertWordData(mDb);
 
         // get reference to gridviw from the main layout
         categotyGV = (GridView) findViewById(R.id.gridViewMain);
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        initNavigationDrawer();
 
     }
 
@@ -121,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(startActivityIntent);
     }
 
-    private void initNavigationDrawer() {
+    public void initNavigationDrawer() {
         mNavView = (NavigationView)findViewById(R.id.navView);
         mNavView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -136,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
         tv_email.setText("salabson4@yahoo.co.uk");
 
         // set and wire ActionBarDrawerToggle
+        mDrawer = (DrawerLayout)findViewById(R.id.drawer) ;
         mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer){
             @Override
             public void onDrawerClosed(View v){

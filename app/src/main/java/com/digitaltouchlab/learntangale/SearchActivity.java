@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.preference.PreferenceManager;
 import android.support.v7.widget.SearchView;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -37,14 +38,18 @@ public class SearchActivity extends AppCompatActivity {
     DatabaseUtils mDbUtils;
     SQLiteDatabase db;
     LearnTangaleDbHelper dbHelper;
+    private Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word);
+        toolbar = (Toolbar)findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         handleIntent(getIntent());
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+
 
         dbHelper = new LearnTangaleDbHelper(this);
         db = dbHelper.getWritableDatabase();
@@ -160,7 +165,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             //this close the search activity as search view collapse
             public boolean onMenuItemActionCollapse(MenuItem item) {
-                finish();
+               finish();
                 return true;
             }
         });

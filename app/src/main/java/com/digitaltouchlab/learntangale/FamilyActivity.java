@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.preference.PreferenceManager;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
@@ -26,12 +27,14 @@ public class FamilyActivity extends AppCompatActivity implements  SharedPreferen
     private int lastSelectedItem = -1;
     // database  access variables
     DatabaseUtils mDbUtils;
-    SQLiteDatabase db;
-    LearnTangaleDbHelper dbHelper;
+   private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word);
+        toolbar = (Toolbar)findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         mDbUtils = new DatabaseUtils(this);

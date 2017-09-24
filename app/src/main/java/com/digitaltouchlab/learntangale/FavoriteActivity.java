@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.preference.PreferenceManager;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
@@ -29,11 +30,15 @@ public class FavoriteActivity extends AppCompatActivity {
     DatabaseUtils mDbUtils;
     SQLiteDatabase db;
     LearnTangaleDbHelper dbHelper;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word);
+        toolbar = (Toolbar)findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ActionBar actionBar = this.getSupportActionBar();
         // Set the action bar back button to look like an up button
