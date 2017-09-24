@@ -48,7 +48,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word);
-        mToolbar = (Toolbar)findViewById(R.id.toolbar1);
+        mToolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
