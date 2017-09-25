@@ -27,6 +27,8 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
     Word currentWord;
     SharedPreferences sharedPreferences;
     public  ImageView  parentImage;
+    DatabaseUtils mDbUtils;
+
 
     public WordCustomAdapater(Context mContext, HashMap<String, List<Word>> listChildData, List<Word> listParentData ) {
         this.mContext = mContext;
@@ -128,7 +130,8 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
             @Override
             public void onClick(View view) {
 
-                db = dbHelper.getWritableDatabase();
+               mDbUtils =  new DatabaseUtils(mContext);
+                mDbUtils.Open();
                 if (Boolean.valueOf(currentWord.getIsAddedToFavorit())) {
                     // add stuff to remove the word from favorite
                     //.......
@@ -138,24 +141,8 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
                     // change favorite exist to false
                     currentWord.setAddedToFavorite("false");
 
-                    ContentValues cv = new ContentValues();
-                    cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE, currentWord.getTangaleTranlation());
-                    cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,currentWord.getEnglishTranlation());
-                    cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
-                    cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,currentWord.getwordImageId() );
-                    cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
-                    cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,currentWord.getCategoryId());
-                    Log.v("WordAdapter", id + " " + currentWord.getIsAddedToFavorit() );
-
-
-                    try{
-                        int z = db.update(LearnTangaleContract.WordEntry.TABLE_NAME,cv, LearnTangaleContract.WordEntry._ID + "=" + id,null);
-                        db.close();
-                        Log.v("WordAdapter", "update result " + z );
-                    }catch (Exception e){
-                        e.printStackTrace();
-                        db.close();
-                    }
+                   mDbUtils.updateWordById(id, currentWord.getTangaleTranlation(),currentWord.getEnglishTranlation(),currentWord.getHausaTranlation(),
+                           currentWord.getwordImageId(),currentWord.getIsAddedToFavorit(),currentWord.getCategoryId());
 
                 } else {
                     // add stuff to add the word to favorite
@@ -164,14 +151,9 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
                     favoriteImage.setImageResource(R.drawable.ic_favorite_on);
                     // change favorite exist to false
                     currentWord.setAddedToFavorite("true");
-                    ContentValues cv = new ContentValues();
-                    cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE, currentWord.getTangaleTranlation());
-                    cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,currentWord.getEnglishTranlation());
-                    cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, currentWord.getHausaTranlation());
-                    cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,currentWord.getwordImageId() );
-                    cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE,currentWord.getIsAddedToFavorit());
+                    mDbUtils.updateWordById(id, currentWord.getTangaleTranlation(),currentWord.getEnglishTranlation(),currentWord.getHausaTranlation(),
+                            currentWord.getwordImageId(),currentWord.getIsAddedToFavorit(),currentWord.getCategoryId());
 
-                    db.update(LearnTangaleContract.WordEntry.TABLE_NAME,cv, LearnTangaleContract.WordEntry._ID + "=" + id,null);
                 }
             }
         });

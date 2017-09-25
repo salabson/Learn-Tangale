@@ -213,8 +213,9 @@ public class SearchActivity extends AppCompatActivity {
             String hausa = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_HAUSA));
             int imageId = cursor.getInt(cursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID));
             String isAddedToFavorite = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE));
+            int categoryId = cursor.getInt(cursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID));
             // create word object correspond to each row of cursor and add it word list
-            words.add(new Word(id,tangale, english, hausa, imageId, isAddedToFavorite));
+            words.add(new Word(id,tangale, english, hausa, imageId, isAddedToFavorite,categoryId));
         }
 
         // create variable that hold each word
