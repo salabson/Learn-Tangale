@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.NavUtils;
@@ -173,6 +174,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 drawerLayout.closeDrawers();
                 break;
+            case R.id.nav_rate:
+                intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("market://details?id=com.digitaltouchlab.learntangale"));
+                startActivity(intent);
+                break;
+            case R.id.nav_send_feedback:
+                intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/email");
+                intent.putExtra(Intent.EXTRA_SUBJECT,"FeedBack");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"salabson4@yahoo.co.uk"});
+                startActivity(Intent.createChooser(intent,"Feedback:"));
+
             default:
                 drawerLayout.closeDrawers();
         }
