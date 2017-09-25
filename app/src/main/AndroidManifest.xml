@@ -75,9 +75,11 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".FavoriteActivity"
-            android:launchMode="singleTop"
-            android:label="Favorites"></activity>
+        <activity
+            android:name=".FavoriteActivity"
+            android:label="Favorites"
+            android:launchMode="singleTop" />
+        <activity android:name=".DeveloperProfile"></activity>
     </application>
 
 </manifest>
