@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mToolbar = (Toolbar)findViewById(R.id.toolbar);
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer);
         setSupportActionBar(mToolbar);
 
 
@@ -60,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mDbUtils = new DatabaseUtils(this);
-       // mDbHelper = new LearnTangaleDbHelper(this);
-       // mDb = mDbHelper.getWritableDatabase();
-        //InsertData.insertCategpryData(mDb);
-      //InsertData.insertWordData(mDb);
+       mDbHelper = new LearnTangaleDbHelper(this);
+       mDb = mDbHelper.getWritableDatabase();
+       InsertData.insertCategpryData(mDb);
+      InsertData.insertWordData(mDb);
 
         // get reference to gridviw from the main layout
         categotyGV = (GridView) findViewById(R.id.gridViewMain);
@@ -124,11 +125,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initNavigationDrawer() {
-        mNavView = (NavigationView)findViewById(R.id.navView);
+        mNavView = (NavigationView) findViewById(R.id.navView);
         mNavView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                return false;
+            setupDrawer(item,mDrawer);
+                return true;
             }
         });
 
@@ -138,10 +140,10 @@ public class MainActivity extends AppCompatActivity {
         tv_email.setText("salabson4@yahoo.co.uk");
 
         // set and wire ActionBarDrawerToggle
-        mDrawer = (DrawerLayout)findViewById(R.id.drawer) ;
-        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer){
+        //mDrawer = (DrawerLayout) findViewById(R.id.drawer);
+        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer) {
             @Override
-            public void onDrawerClosed(View v){
+            public void onDrawerClosed(View v) {
                 super.onDrawerClosed(v);
             }
 
@@ -152,6 +154,28 @@ public class MainActivity extends AppCompatActivity {
         };
         mDrawer.addDrawerListener(mActionBarDrawerToggle);
         mActionBarDrawerToggle.syncState();
+
+    }
+    private void setupDrawer(MenuItem menuItem, DrawerLayout drawerLayout) {
+        Intent intent = null;
+        switch (menuItem.getItemId()) {
+
+            case R.id.nav_home:
+                drawerLayout.closeDrawers();
+                break;
+            case R.id.nav_favorites:
+                 intent = new Intent(this,FavoriteActivity.class);
+                startActivity(intent);
+                drawerLayout.closeDrawers();
+                break;
+            case R.id.nav_settings:
+                 intent = new Intent(this,SettingsActivity.class);
+                startActivity(intent);
+                drawerLayout.closeDrawers();
+                break;
+            default:
+                drawerLayout.closeDrawers();
+        }
     }
     @Override
     protected void onPause() {

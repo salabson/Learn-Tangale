@@ -16,7 +16,7 @@ public class LearnTangaleDbHelper extends SQLiteOpenHelper{
     private static final String DATABASE_NAME = "learntangale.db";
 
     // If you change the database schema, you must increment the database version
-    private final static int  DATABASE_VERSION = 5;
+    private final static int  DATABASE_VERSION = 6;
 
     public LearnTangaleDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

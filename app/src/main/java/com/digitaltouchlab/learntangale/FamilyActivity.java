@@ -166,10 +166,11 @@ public class FamilyActivity extends AppCompatActivity implements  SharedPreferen
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String Key) {
 
         // call method that populate parent and child data
+        mDbUtils.Open();
         fillData();
 
         // create custom adapter object and set expandable list view to it
         WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
-
+        mDbUtils.Close();
     }
 }
