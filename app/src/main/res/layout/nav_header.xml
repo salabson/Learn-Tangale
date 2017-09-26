@@ -8,13 +8,16 @@
     android:paddingBottom="20dp"
     android:background="@color/colorPrimaryDark">
 
-    <ImageView
-        app:srcCompat="@drawable/ic_person_black_24dp"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-       />
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/developer"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="25dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
 
     <TextView
         android:id="@+id/tv_email"
