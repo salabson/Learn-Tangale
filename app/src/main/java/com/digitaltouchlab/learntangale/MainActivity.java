@@ -182,8 +182,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_send_feedback:
                 intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/email");
-                intent.putExtra(Intent.EXTRA_SUBJECT,"FeedBack");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"salabson4@yahoo.co.uk"});
+                intent.putExtra(Intent.EXTRA_SUBJECT,"FeedBack for Learn Tangale App");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"salabson4@yahoo.co.uk","salabson4@gmail.com","digitaltouchlab_ng@gmail.com"});
                 startActivity(Intent.createChooser(intent,"Feedback:"));
                 break;
             case R.id.nav_about_developer:
