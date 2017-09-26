@@ -63,9 +63,14 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
         expLV.setDivider(getResources().getDrawable(R.color.lightGray));
         expLV.setDividerHeight(1);
 
+        // initialize parent and child data viriables
+        parentData = new ArrayList<>();
+        childData = new HashMap<>();
+
         // call method that populate parent and child data
         mDbUtils.Open();
-        fillData();
+        Cursor cursor = mDbUtils.getWordsByCategory(1);
+        LoadData.fillData(parentData, childData, cursor);
 
         // create custom adapter object and set expandable list view to it
         WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
