@@ -33,4 +33,18 @@
     <string name="nav_send_feedback">Send Feedback</string>
     <string name="nav_about_developer">About Developer</string>
 
+
+    <string name="developer_profile">
+        Salabson S. Isa is a season Software Engineer who develops Desktop,
+        Web and Moblie applications. He is the Founder and CEO of Digital Touch Lab
+        an I.T. firm.
+    </string>
+    <string name="developer_contact">
+        +2348064199991
+        +2349023811119
+
+        salabson4@yahoo.co.uk
+        salabson4@gmail.com
+        digitaltouchlab_ng@gmail.com
+    </string>
 </resources>

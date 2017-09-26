@@ -185,7 +185,12 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_SUBJECT,"FeedBack");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"salabson4@yahoo.co.uk"});
                 startActivity(Intent.createChooser(intent,"Feedback:"));
-
+                break;
+            case R.id.nav_about_developer:
+                intent = new Intent(this,DeveloperProfile.class);
+                startActivity(intent);
+                drawerLayout.closeDrawers();
+                break;
             default:
                 drawerLayout.closeDrawers();
         }
