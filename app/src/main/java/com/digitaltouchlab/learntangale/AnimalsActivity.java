@@ -180,7 +180,8 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
          PreferenceManager.getDefaultSharedPreferences(this)
                  .registerOnSharedPreferenceChangeListener(this);
         mDbUtils.Open();
-        fillData();
+        Cursor cursor = mDbUtils.getWordsByCategory(1);
+        LoadData.fillData(parentData, childData, cursor);
         WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
         expLV.setAdapter(customAdapater);
     }

@@ -64,9 +64,14 @@ public class SearchActivity extends AppCompatActivity {
         expLV.setDividerHeight(1);
 
         // call method that populate parent and child data
+        // initialize parent and child data viriables
+        parentData = new ArrayList<>();
+        childData = new HashMap<>();
+
+        // call method that populate parent and child data
         mDbUtils.Open();
-        Cursor mCursor = mDbUtils.getAllword();
-        fillData(mCursor);
+        Cursor cursor = mDbUtils.getAllword();
+        LoadData.fillData(parentData, childData, cursor);
 
         // create custom adapter object and set expandable list view to it
         WordCustomAdapater customAdapater = new WordCustomAdapater(this, childData, parentData);
@@ -97,7 +102,7 @@ public class SearchActivity extends AppCompatActivity {
             String query = intent.getStringExtra(SearchManager.QUERY);
 
             Cursor cursor = mDbUtils.getWordsByQueryString(query);
-            fillData(cursor);
+            LoadData.fillData(parentData, childData, cursor);
             WordCustomAdapater customAdapater = new WordCustomAdapater(this, childData, parentData);
             expLV.setAdapter(customAdapater);
             Log.v("QUERY", query);
@@ -140,13 +145,13 @@ public class SearchActivity extends AppCompatActivity {
                 // load all data from the Db if searchview is empty
                 if (TextUtils.isEmpty(newText) || newText.length() == 0) {
                     Cursor cursor = mDbUtils.getAllword();
-                    fillData(cursor);
+                    LoadData.fillData(parentData, childData, cursor);
                     WordCustomAdapater customAdapater = new WordCustomAdapater(SearchActivity.this, childData, parentData);
                     expLV.setAdapter(customAdapater);
                     // load all data from the Db based on searchview string
                 } else {
                     Cursor cursor = mDbUtils.getWordsByQueryString(newText);
-                    fillData(cursor);
+                    LoadData.fillData(parentData, childData, cursor);
                     WordCustomAdapater customAdapater = new WordCustomAdapater(SearchActivity.this, childData, parentData);
                     expLV.setAdapter(customAdapater);
                 }
@@ -193,50 +198,5 @@ public class SearchActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
-    // method that populate parent and child data
-    private void fillData(Cursor cursor) {
-        parentData = new ArrayList<>();
-        childData = new HashMap<>();
-        words = new ArrayList<>();
-        // call to method that return all words the db
-
-        //iterate through the cursor to initialize the arraylist of words
-        for (int y = 0; y < cursor.getCount(); y++) {
-            // move cursor to specific row for reading
-            cursor.moveToPosition(y);
-            // retrieve each column value of the cursor and store it in a variable
-            int id = cursor.getInt(cursor.getColumnIndex(LearnTangaleContract.WordEntry._ID));
-            String tangale = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_TANGALE));
-            String english = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_ENGLISH));
-            String hausa = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_HAUSA));
-            int imageId = cursor.getInt(cursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID));
-            String isAddedToFavorite = cursor.getString(cursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE));
-            int categoryId = cursor.getInt(cursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID));
-            // create word object correspond to each row of cursor and add it word list
-            words.add(new Word(id,tangale, english, hausa, imageId, isAddedToFavorite,categoryId));
-        }
-
-        // create variable that hold each word
-        Word word = new Word();
-
-        // iterate through list of words and extract parent and child data
-        for (int i = 0; i < words.size(); i++) {
-            // get word at specific location
-            word = words.get(i);
-            //Add the word to parent list
-            parentData.add(word);
-            // create new list and add it to the child list
-            wordList = new ArrayList<>();
-            wordList.add(word);
-            childData.put(word.getEnglishTranlation(), wordList);
-        }
-
-    }
-
-
-
-
 
 }
