@@ -67,7 +67,6 @@ public class FavoriteActivity extends AppCompatActivity {
         mDbUtils.Open();
         Cursor cursor = mDbUtils.getFavoriteWords();
         LoadData.fillData(parentData, childData, cursor);
-
         // create custom adapter object and set expandable list view to it
         FavoriteCustomAdapter customAdapater = new FavoriteCustomAdapter(this,childData,parentData);
         expLV.setAdapter(customAdapater);
@@ -135,6 +134,8 @@ public class FavoriteActivity extends AppCompatActivity {
         super.onResume();
         mDbUtils.Open();
         Cursor cursor = mDbUtils.getFavoriteWords();
+        parentData = new ArrayList<>();
+        childData = new HashMap<>();
         LoadData.fillData(parentData, childData, cursor);
         // create custom adapter object and set expandable list view to it
         FavoriteCustomAdapter customAdapater = new FavoriteCustomAdapter(this,childData,parentData);

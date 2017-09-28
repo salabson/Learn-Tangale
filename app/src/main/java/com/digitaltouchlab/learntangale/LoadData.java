@@ -12,12 +12,13 @@ import java.util.List;
 
 public class LoadData {
 
+
     // method that populate parent and child data
     public static void fillData(List<Word> parentData, HashMap<String, List<Word>> childData, Cursor mCursor) {
 
 
         ArrayList<Word> words = new ArrayList<>();
-        ArrayList<Word> ChildwordList = new ArrayList<>();
+        ArrayList<Word> ChildwordList ;
 
         //iterate through the cursor to initialize the arraylist of words
         for (int y = 0; y < mCursor.getCount(); y++) {
@@ -46,7 +47,7 @@ public class LoadData {
             //Add the word to parent list
             parentData.add(word);
             // create new list and add it to the child list
-
+            ChildwordList = new ArrayList<>();
             ChildwordList.add(word);
             childData.put(word.getEnglishTranlation(), ChildwordList);
         }

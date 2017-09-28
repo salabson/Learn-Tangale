@@ -55,6 +55,7 @@ public class FamilyActivity extends AppCompatActivity implements  SharedPreferen
         // call method that populate parent and child data
         mDbUtils.Open();
         Cursor cursor = mDbUtils.getWordsByCategory(2);
+
         LoadData.fillData(parentData, childData, cursor);
 
         // create custom adapter object and set expandable list view to it
@@ -157,6 +158,8 @@ public class FamilyActivity extends AppCompatActivity implements  SharedPreferen
                 .registerOnSharedPreferenceChangeListener(this);
         mDbUtils.Open();
         Cursor cursor = mDbUtils.getWordsByCategory(2);
+        parentData = new ArrayList<>();
+        childData = new HashMap<>();
         LoadData.fillData(parentData, childData, cursor);
         WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
         expLV.setAdapter(customAdapater);
@@ -175,6 +178,8 @@ public class FamilyActivity extends AppCompatActivity implements  SharedPreferen
         // call method that populate parent and child data
         mDbUtils.Open();
         Cursor cursor = mDbUtils.getWordsByCategory(2);
+        parentData = new ArrayList<>();
+        childData = new HashMap<>();
         LoadData.fillData(parentData, childData, cursor);
 
         // create custom adapter object and set expandable list view to it

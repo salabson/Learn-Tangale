@@ -71,6 +71,7 @@ public class SearchActivity extends AppCompatActivity {
         // call method that populate parent and child data
         mDbUtils.Open();
         Cursor cursor = mDbUtils.getAllword();
+
         LoadData.fillData(parentData, childData, cursor);
 
         // create custom adapter object and set expandable list view to it
@@ -102,6 +103,8 @@ public class SearchActivity extends AppCompatActivity {
             String query = intent.getStringExtra(SearchManager.QUERY);
 
             Cursor cursor = mDbUtils.getWordsByQueryString(query);
+            parentData = new ArrayList<>();
+            childData = new HashMap<>();
             LoadData.fillData(parentData, childData, cursor);
             WordCustomAdapater customAdapater = new WordCustomAdapater(this, childData, parentData);
             expLV.setAdapter(customAdapater);
@@ -144,6 +147,8 @@ public class SearchActivity extends AppCompatActivity {
             public boolean onQueryTextChange(String newText) {
                 // load all data from the Db if searchview is empty
                 if (TextUtils.isEmpty(newText) || newText.length() == 0) {
+                    parentData = new ArrayList<>();
+                    childData = new HashMap<>();
                     Cursor cursor = mDbUtils.getAllword();
                     LoadData.fillData(parentData, childData, cursor);
                     WordCustomAdapater customAdapater = new WordCustomAdapater(SearchActivity.this, childData, parentData);
@@ -151,6 +156,8 @@ public class SearchActivity extends AppCompatActivity {
                     // load all data from the Db based on searchview string
                 } else {
                     Cursor cursor = mDbUtils.getWordsByQueryString(newText);
+                    parentData = new ArrayList<>();
+                    childData = new HashMap<>();
                     LoadData.fillData(parentData, childData, cursor);
                     WordCustomAdapater customAdapater = new WordCustomAdapater(SearchActivity.this, childData, parentData);
                     expLV.setAdapter(customAdapater);
