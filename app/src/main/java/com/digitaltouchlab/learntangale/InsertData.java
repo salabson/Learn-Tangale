@@ -31,10 +31,9 @@ public class InsertData {
 
         ContentValues cv = new ContentValues();
         cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Animals");
-        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.animals);
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.animal);
 
         list.add(cv);
-
         cv = new ContentValues();
         cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Family");
         cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.family);
@@ -42,7 +41,7 @@ public class InsertData {
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Counting");
-        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.numbers);
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.counting);
         list.add(cv);
 
 
@@ -53,14 +52,28 @@ public class InsertData {
 
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Phrases");
-        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.phrases);
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"General Conversation");
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.coversation);
         list.add(cv);
 
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Time and Seasons");
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Time and Date");
         cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.time);
+        list.add(cv);
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Greetings");
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.greeting);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Common words");
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.word);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Human Body");
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.ic_body);
         list.add(cv);
 
         try {
@@ -100,7 +113,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Bai");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Dog");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kare");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.animals);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_dog);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,1);
         list.add(cv);

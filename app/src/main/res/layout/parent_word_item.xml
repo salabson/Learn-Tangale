@@ -10,7 +10,7 @@
     android:id="@+id/wordImage"
     android:layout_width="45dp"
     android:layout_height="45dp"
-    android:src="@drawable/animals"
+    android:src="@drawable/animal"
     android:paddingLeft="16dp"
     android:layout_weight="0"
     />
