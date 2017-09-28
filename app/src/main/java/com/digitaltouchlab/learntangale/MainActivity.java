@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int COUNTING = 2;
     private static final int ENQUIRIES = 3;
     private static final int PHRASES= 4;
-
+    private static final int GREETINGS = 6;
     DatabaseUtils mDbUtils;
 
     ArrayList<WordCategory> wordCategories;
@@ -119,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case PHRASES:
                 startActivityIntent = new Intent(this,FavoriteActivity.class);
+                break;
+            case GREETINGS:
+                startActivityIntent = new Intent(this,GreetingsActivity.class);
                 break;
 
         }

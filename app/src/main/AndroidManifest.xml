@@ -79,7 +79,8 @@
             android:name=".FavoriteActivity"
             android:label="Favorites"
             android:launchMode="singleTop" />
-        <activity android:name=".DeveloperProfile"></activity>
+        <activity android:name=".DeveloperProfile" />
+        <activity android:name=".GreetingsActivity"></activity>
     </application>
 
 </manifest>

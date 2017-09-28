@@ -165,7 +165,12 @@ public class WordCustomAdapater extends BaseExpandableListAdapter {
         showImage = sharedPreferences.getBoolean(mContext.getString(R.string.pref_show_image_key),mContext.getResources().getBoolean(R.bool.show_image_default));
        // if the value of checkbox is true in shared preferences display image otherwise hide the image
         if (showImage) {
-            parentImage.setImageResource(currentWord.getwordImageId());
+            if (currentWord.getwordImageId() == -1) {
+                parentImage.setVisibility(View.GONE);
+            } else {
+                parentImage.setImageResource(currentWord.getwordImageId());
+            }
+
         } else {
             parentImage.setVisibility(View.GONE);
         }

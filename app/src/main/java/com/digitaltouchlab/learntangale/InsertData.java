@@ -76,6 +76,11 @@ public class InsertData {
         cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.ic_body);
         list.add(cv);
 
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Colors");
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.colours);
+        list.add(cv);
+
         try {
             db.beginTransaction();
             // clear db
@@ -221,6 +226,34 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_woman);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,2);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Daru go");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Good Morning");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Barka dan safiya");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, -1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,3);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Dibishi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Good Afternoon");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Barka da rana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, -1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,3);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Diwini");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Good evening");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Barka da yini");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, -1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,3);
         list.add(cv);
 
         try {
