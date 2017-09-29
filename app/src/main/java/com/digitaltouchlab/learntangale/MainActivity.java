@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int COMMON_WORDS = 7;
     private static final int HUMAN_BODY = 8;
     private static final int COLORS = 9;
-    private static final int COMMON_ACTIONS = 6;
+    private static final int COMMON_ACTIONS = 10;
 
     DatabaseUtils mDbUtils;
 
@@ -125,11 +125,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivityIntent = new Intent(this,EnquiriesActivity.class);
                 break;
             case PHRASES:
-                startActivityIntent = new Intent(this,FavoriteActivity.class);
+                startActivityIntent = new Intent(this,PhrasesActivity.class);
+                break;
+            case TIME_DATE:
+                startActivityIntent = new Intent(this,TimeActivity.class);
                 break;
             case GREETINGS:
                 startActivityIntent = new Intent(this,GreetingsActivity.class);
                 break;
+            case COMMON_WORDS:
+                startActivityIntent = new Intent(this,CommonWordsActivity.class);
+                break;
+            case HUMAN_BODY:
+                startActivityIntent = new Intent(this,HumanBodyActivity.class);
+                break;
+            case COLORS:
+                startActivityIntent = new Intent(this,ColorsActivity.class);
+                break;
+            case COMMON_ACTIONS:
+                startActivityIntent = new Intent(this,CommonActionsActivity.class);
+                break;
+
 
         }
         startActivity(startActivityIntent);
