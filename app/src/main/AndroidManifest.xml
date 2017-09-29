@@ -79,13 +79,58 @@
             android:name=".FavoriteActivity"
             android:label="Favorites"
             android:launchMode="singleTop" />
-        <activity android:name=".DeveloperProfile" />
-        <activity android:name=".GreetingsActivity" />
-        <activity android:name=".TimeActivity" />
-        <activity android:name=".CommonWordsActivity" />
-        <activity android:name=".HumanBodyActivity" />
-        <activity android:name=".ColorsActivity" />
-        <activity android:name=".CommonActionsActivity"></activity>
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+        <activity
+            android:name=".DeveloperProfile"
+            android:label="Developer Profile">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".GreetingsActivity"
+            android:label="Greetings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".TimeActivity"
+            android:label="Time and Date">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".CommonWordsActivity"
+            android:label="Common Words">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".HumanBodyActivity"
+            android:label="Human Body" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ColorsActivity"
+            android:label="Colors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".CommonActionsActivity"
+            android:label="Common Actions">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>
