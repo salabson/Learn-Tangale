@@ -41,7 +41,13 @@ public class MainActivity extends AppCompatActivity {
     private static final int COUNTING = 2;
     private static final int ENQUIRIES = 3;
     private static final int PHRASES= 4;
+    private static final int TIME_DATE = 5;
     private static final int GREETINGS = 6;
+    private static final int COMMON_WORDS = 7;
+    private static final int HUMAN_BODY = 8;
+    private static final int COLORS = 9;
+    private static final int COMMON_ACTIONS = 6;
+
     DatabaseUtils mDbUtils;
 
     ArrayList<WordCategory> wordCategories;
