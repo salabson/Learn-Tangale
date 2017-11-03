@@ -78,10 +78,11 @@
         <activity
             android:name=".FavoriteActivity"
             android:label="Favorites"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".DeveloperProfile"
             android:label="Developer Profile">

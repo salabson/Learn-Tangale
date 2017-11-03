@@ -159,7 +159,22 @@ public class FavoriteCustomAdapter extends BaseExpandableListAdapter {
 
         // get reference to parent word image
         ImageView  parentImage = (ImageView)convertView.findViewById(R.id.wordImage);
-        parentImage.setImageResource(currentWord.getwordImageId());
+        // get reference to parent word image
+        parentImage = (ImageView)convertView.findViewById(R.id.wordImage);
+        //retrieve the value of show iamge checkbox from the sharesprefences
+        boolean showImage;
+        showImage = sharedPreferences.getBoolean(mContext.getString(R.string.pref_show_image_key),mContext.getResources().getBoolean(R.bool.show_image_default));
+        // if the value of checkbox is true in shared preferences display image otherwise hide the image
+        if (showImage) {
+            if (currentWord.getwordImageId() == -1) {
+                parentImage.setVisibility(View.GONE);
+            } else {
+                parentImage.setImageResource(currentWord.getwordImageId());
+            }
+
+        } else {
+            parentImage.setVisibility(View.GONE);
+        }
 
         // return the for display on expandable list view
         return convertView;
