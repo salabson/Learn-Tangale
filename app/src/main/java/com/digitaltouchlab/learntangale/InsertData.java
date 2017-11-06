@@ -73,7 +73,7 @@ public class InsertData {
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.CategoryEntry.COLUMN_NAME,"Human Body");
-        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.ic_body);
+        cv.put(LearnTangaleContract.CategoryEntry.COLUMN_IMAGE_ID,R.drawable.body);
         list.add(cv);
 
         cv = new ContentValues();
@@ -221,7 +221,7 @@ public class InsertData {
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Worop");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Mowan");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Wowan");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Mace");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_woman);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "true");
