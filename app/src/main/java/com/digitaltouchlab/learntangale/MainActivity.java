@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         // get reference to gridviw from the main layout
         categotyGV = (GridView) findViewById(R.id.gridViewMain);
 
+
         // call fill data method tp populate word category array list
         mDbUtils.Open();
         fillData();
