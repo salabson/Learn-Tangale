@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
     private static final int HUMAN_BODY = 8;
     private static final int COLORS = 9;
     private static final int COMMON_ACTIONS = 10;
+    private static final int BASICS = 11;
+    private static final int FARM = 12;
+    private static final int HOME_ITEMS = 13;
+    private static final int CLIMATE_WEATHER = 11;
 
     DatabaseUtils mDbUtils;
 
