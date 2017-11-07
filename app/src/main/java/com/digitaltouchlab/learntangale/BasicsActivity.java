@@ -79,48 +79,6 @@ public class BasicsActivity extends AppCompatActivity implements SharedPreferenc
 
     }
 
-    // method that populate parent and child data
-    private void fillData() {
-        parentData = new ArrayList<>();
-        childData = new HashMap<>();
-        words = new ArrayList<>();
-        // call to method that return all words the db
-        Cursor mCursor = mDbUtils.getWordsByCategory(1);
-
-        //iterate through the cursor to initialize the arraylist of words
-        for (int y = 0; y < mCursor.getCount(); y++) {
-            // move cursor to specific row for reading
-            mCursor.moveToPosition(y);
-            // retrieve each column value of the cursor and store it in a variable
-            int id = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.WordEntry._ID));
-            String tangale = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_TANGALE));
-            String english = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_ENGLISH));
-            String hausa = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_HAUSA));
-            int imageId = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID));
-            String isAddedToFavorite = mCursor.getString(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE));
-            int categoryId = mCursor.getInt(mCursor.getColumnIndex(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID));
-
-            // create word object correspond to each row of cursor and add it word list
-            words.add(new Word(id, tangale, english, hausa, imageId, isAddedToFavorite, categoryId));
-        }
-
-        // create variable that hold each word
-        Word word = new Word();
-
-        // iterate through list of words and extract parent and child data
-        for (int i = 0; i < words.size(); i++) {
-            // get word at specific location
-            word = words.get(i);
-            //Add the word to parent list
-            parentData.add(word);
-            // create new list and add it to the child list
-            wordList = new ArrayList<>();
-            wordList.add(word);
-            childData.put(word.getEnglishTranlation(), wordList);
-        }
-
-
-    }
 
 
     @Override
