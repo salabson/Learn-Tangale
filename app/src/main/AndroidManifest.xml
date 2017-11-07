@@ -51,7 +51,7 @@
         </activity>
         <activity
             android:name=".GeneralConversationActivity"
-            android:label="Phrases">
+            android:label="General Conversation">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
@@ -132,10 +132,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".BasicsActivity" />
-        <activity android:name=".FarmActivity" />
-        <activity android:name=".HomeItemsActivity" />
-        <activity android:name=".WeatherActivity"></activity>
+        <activity android:name=".BasicsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".FarmActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".HomeItemsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".WeatherActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>
