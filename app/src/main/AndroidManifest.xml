@@ -50,7 +50,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".PhrasesActivity"
+            android:name=".GeneralConversationActivity"
             android:label="Phrases">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
