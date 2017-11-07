@@ -79,9 +79,9 @@
             android:name=".FavoriteActivity"
             android:label="Favorites"
             android:launchMode="singleTop">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".DeveloperProfile"
@@ -113,7 +113,7 @@
         </activity>
         <activity
             android:name=".HumanBodyActivity"
-            android:label="Human Body" >
+            android:label="Human Body">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
@@ -132,6 +132,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity android:name=".BasicsActivity" />
+        <activity android:name=".FarmActivity" />
+        <activity android:name=".HomeItemsActivity" />
+        <activity android:name=".WeatherActivity"></activity>
     </application>
 
 </manifest>

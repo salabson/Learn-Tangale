@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int BASICS = 11;
     private static final int FARM = 12;
     private static final int HOME_ITEMS = 13;
-    private static final int CLIMATE_WEATHER = 11;
+    private static final int CLIMATE_WEATHER = 14;
 
     DatabaseUtils mDbUtils;
 
@@ -148,6 +148,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivityIntent = new Intent(this,ColorsActivity.class);
                 break;
             case COMMON_ACTIONS:
+                startActivityIntent = new Intent(this,CommonActionsActivity.class);
+                break;
+            case BASICS:
+                startActivityIntent = new Intent(this,CommonActionsActivity.class);
+                break;
+            case FARM:
+                startActivityIntent = new Intent(this,CommonActionsActivity.class);
+                break;
+            case HOME_ITEMS:
+                startActivityIntent = new Intent(this,CommonActionsActivity.class);
+                break;
+            case CLIMATE_WEATHER:
                 startActivityIntent = new Intent(this,CommonActionsActivity.class);
                 break;
 
