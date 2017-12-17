@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_rate:
                 intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("market://details?id=com.digitaltouchlab.learntangale"));
-                startActivity(intent);
+                startActivity(Intent.createChooser(intent,"Google Play Store"));
                 break;
             case R.id.nav_send_feedback:
                 intent = new Intent(Intent.ACTION_SEND);

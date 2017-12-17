@@ -256,6 +256,337 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,3);
         list.add(cv);
 
+        // human body
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Head");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kai");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_head);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Yo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Leg");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kafai");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_leg);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"wissin");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Nose");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Hanci");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_nose);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"wissin");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Nose");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Hanci");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_nose);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Liwin poara");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Fingers");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Yatsu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_fingers);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Te");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ear");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kunne");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_ear);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ago");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Stomatch");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Tumbi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_stomach);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Tom");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Blood");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Jini");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_blood);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wudo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Tooth");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Hakori");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_tooth);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wok-ki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Hair");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Gashi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_hair);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Dom salaido");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Eye");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Ido");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_eye);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Pok");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Mouth");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Baki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_mouth);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Rozo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Neck");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Wuya");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_neck);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Po-sindi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Chest");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Gyirji");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_chest);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ara");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Hand");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Hannu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_hand);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Daga");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Tongue");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Harshe");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_tongue);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Poido");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Forehead");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Goshi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_forehead);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wok dengum");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Beared");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Gemu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_beared);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wok pok");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Moustache");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Gahin baki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_moustache);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Purum");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Knee");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Gwiwan kafa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_knee);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"purum pakka");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Elbow");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Gwiwan Hannu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_nose);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kad pok");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Lips");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Leben baki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_lips);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kwal pakka");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Shoulder");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kafada");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_shoulder);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Widi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Breast");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Nono");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_breast);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ik");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Body");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Jiki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_body);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kwarangkwatulang");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ankle");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Mahadin kafa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_ankle);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ido");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Face");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Fuska");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_face);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Woj ruktuduk");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ribs");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Hakarkari");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_ribs);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"La-tinthong");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Nose");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA," sawun kafa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_foot);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Dak-asondi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Buttock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Duwawu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_buttock);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wok-salaido");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Eye lashes");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Gashin ido");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_eyelashes);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wok kongol salaido");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Eyebrow");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Gira");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_eyebrow);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kwaddak");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Nail");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Farce");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_nails);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Labobok");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Armfit");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Hamata");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_armpit);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Buthe-buthe");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Brain");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwakwalwa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_brain);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"wissin");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Nose");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Hanci");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_nose);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        list.add(cv);
+
+
+
         try {
             db.beginTransaction();
             // clear db
