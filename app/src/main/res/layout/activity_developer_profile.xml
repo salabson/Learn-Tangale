@@ -72,18 +72,21 @@
                     android:textColor="@color/colorPrimary" />
 
                 <ImageView
+                    android:id="@+id/soc_fb"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:padding="20dp"
                     android:src="@drawable/soc_fb" />
 
                 <ImageView
+                    android:id="@+id/soc_tw"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:padding="20dp"
                     android:src="@drawable/soc_tw" />
 
                 <ImageView
+                    android:id="@+id/soc_in"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:padding="20dp"
