@@ -30,10 +30,23 @@ private Toolbar mToolbar;
         img_fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+            openSocialMedia(getString(R.string.facebook));
             }
         });
 
+        img_tw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSocialMedia(getString(R.string.twitter));
+            }
+        });
+
+        img_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSocialMedia(getString(R.string.linkin));
+            }
+        });
     }
 
 
