@@ -1,5 +1,7 @@
 package com.digitaltouchlab.learntangale;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -14,4 +16,16 @@ private Toolbar mToolbar;
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
+
+    private void openSocialMedia(String webAddress) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        Uri uriAddress = Uri.parse(webAddress);
+        intent.setData(uriAddress);
+        startActivity(Intent.createChooser(intent,"Connect to Social Media"));
+
+
+    }
+
+
 }
