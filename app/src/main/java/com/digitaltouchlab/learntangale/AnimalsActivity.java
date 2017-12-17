@@ -28,6 +28,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import static com.digitaltouchlab.learntangale.MainActivity.ANIMALS;
+
 public class AnimalsActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
     ExpandableListView expLV;
     List<Word> parentData ;
@@ -180,7 +182,7 @@ public class AnimalsActivity extends AppCompatActivity implements SharedPreferen
          PreferenceManager.getDefaultSharedPreferences(this)
                  .registerOnSharedPreferenceChangeListener(this);
         mDbUtils.Open();
-        Cursor cursor = mDbUtils.getWordsByCategory(1);
+        Cursor cursor = mDbUtils.getWordsByCategory(ANIMALS);
         parentData = new ArrayList<>();
         childData = new HashMap<>();
         LoadData.fillData(parentData, childData, cursor);

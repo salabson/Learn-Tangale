@@ -34,21 +34,21 @@ public class MainActivity extends AppCompatActivity {
     private LearnTangaleDbHelper mDbHelper;
     private SQLiteDatabase mDb;
     // create constants that represent index various categories in array list
-    private static final int ANIMALS = 0;
-    private static final int FAMILY = 1;
-    private static final int COUNTING = 2;
-    private static final int ENQUIRIES = 3;
-    private static final int PHRASES= 4;
-    private static final int TIME_DATE = 5;
-    private static final int GREETINGS = 6;
-    private static final int COMMON_WORDS = 7;
-    private static final int HUMAN_BODY = 8;
-    private static final int COLORS = 9;
-    private static final int COMMON_ACTIONS = 10;
-    private static final int BASICS = 11;
-    private static final int FARM = 12;
-    private static final int HOME_ITEMS = 13;
-    private static final int CLIMATE_WEATHER = 14;
+    public static final int ANIMALS = 0;
+    public static final int FAMILY = 1;
+    public static final int COUNTING = 2;
+    public static final int ENQUIRIES = 3;
+    public static final int PHRASES= 4;
+    public static final int TIME_DATE = 5;
+    public static final int GREETINGS = 6;
+    public static final int COMMON_WORDS = 7;
+    public static final int HUMAN_BODY = 8;
+    public static final int COLORS = 9;
+    public static final int COMMON_ACTIONS = 10;
+    public static final int BASICS = 11;
+    public static final int FARM = 12;
+    public static final int HOME_ITEMS = 13;
+    public static final int CLIMATE_WEATHER = 14;
 
     DatabaseUtils mDbUtils;
 
