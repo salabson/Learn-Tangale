@@ -34,21 +34,21 @@ public class MainActivity extends AppCompatActivity {
     private LearnTangaleDbHelper mDbHelper;
     private SQLiteDatabase mDb;
     // create constants that represent index various categories in array list
-    public static final int ANIMALS = 0;
-    public static final int FAMILY = 1;
-    public static final int COUNTING = 2;
-    public static final int ENQUIRIES = 3;
-    public static final int PHRASES= 4;
-    public static final int TIME_DATE = 5;
-    public static final int GREETINGS = 6;
-    public static final int COMMON_WORDS = 7;
-    public static final int HUMAN_BODY = 8;
-    public static final int COLORS = 9;
-    public static final int COMMON_ACTIONS = 10;
-    public static final int BASICS = 11;
-    public static final int FARM = 12;
-    public static final int HOME_ITEMS = 13;
-    public static final int CLIMATE_WEATHER = 14;
+    public static final int BASICS = 0;
+    public static final int ANIMALS = 1;
+    public static final int FAMILY = 2;
+    public static final int HOME_OBJECTS = 3;
+    public static final int COUNTING = 4;
+    public static final int ENQUIRIES = 5;
+    public static final int PHRASES= 6;
+    public static final int TIME_DATE = 7;
+    public static final int GREETINGS = 8;
+    public static final int CLIMATE_WEATHER = 9;
+    public static final int GENERAL_WORDS = 10;
+    public static final int COMMON_ACTIONS = 11;
+    public static final int HUMAN_BODY = 12;
+    public static final int COLORS = 13;
+    public static final int FARM = 14;
 
     DatabaseUtils mDbUtils;
 
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
             case GREETINGS:
                 startActivityIntent = new Intent(this,GreetingsActivity.class);
                 break;
-            case COMMON_WORDS:
+            case GENERAL_WORDS:
                 startActivityIntent = new Intent(this,CommonWordsActivity.class);
                 break;
             case HUMAN_BODY:
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
             case FARM:
                 startActivityIntent = new Intent(this,CommonActionsActivity.class);
                 break;
-            case HOME_ITEMS:
+            case HOME_OBJECTS:
                 startActivityIntent = new Intent(this,CommonActionsActivity.class);
                 break;
             case CLIMATE_WEATHER:

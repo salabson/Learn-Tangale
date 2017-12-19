@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import static com.digitaltouchlab.learntangale.MainActivity.GREETINGS;
+
 public class GreetingsActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
     ExpandableListView expLV;
     List<Word> parentData ;
@@ -56,9 +58,9 @@ public class GreetingsActivity extends AppCompatActivity implements SharedPrefer
         childData = new HashMap<>();
 
         // call method that populate parent and child data
-        mDbUtils.Open();
-        Cursor cursor = mDbUtils.getWordsByCategory(3);
-        LoadData.fillData(parentData, childData, cursor);
+        //mDbUtils.Open();
+        //Cursor cursor = mDbUtils.getWordsByCategory(GREETINGS);
+        //LoadData.fillData(parentData, childData, cursor);
 
         // create custom adapter object and set expandable list view to it
         WordCustomAdapater customAdapater = new WordCustomAdapater(this,childData,parentData);
@@ -116,7 +118,7 @@ public class GreetingsActivity extends AppCompatActivity implements SharedPrefer
         PreferenceManager.getDefaultSharedPreferences(this)
                 .registerOnSharedPreferenceChangeListener(this);
         mDbUtils.Open();
-        Cursor cursor = mDbUtils.getWordsByCategory(3);
+        Cursor cursor = mDbUtils.getWordsByCategory(GREETINGS);
         parentData = new ArrayList<>();
         childData = new HashMap<>();
         LoadData.fillData(parentData, childData, cursor);
