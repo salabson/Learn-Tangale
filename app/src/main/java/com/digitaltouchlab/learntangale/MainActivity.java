@@ -149,16 +149,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivityIntent = new Intent(this,CommonActionsActivity.class);
                 break;
             case BASICS:
-                startActivityIntent = new Intent(this,CommonActionsActivity.class);
+                startActivityIntent = new Intent(this,BasicsActivity.class);
                 break;
             case FARM:
-                startActivityIntent = new Intent(this,CommonActionsActivity.class);
+                startActivityIntent = new Intent(this,FarmActivity.class);
                 break;
             case HOME_OBJECTS:
-                startActivityIntent = new Intent(this,CommonActionsActivity.class);
+                startActivityIntent = new Intent(this,HomeItemsActivity.class);
                 break;
             case CLIMATE_WEATHER:
-                startActivityIntent = new Intent(this,CommonActionsActivity.class);
+                startActivityIntent = new Intent(this,WeatherActivity.class);
                 break;
 
 
