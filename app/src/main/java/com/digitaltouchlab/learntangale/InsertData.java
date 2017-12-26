@@ -11,6 +11,7 @@ import com.digitaltouchlab.learntangale.LearnTangaleContract;
 
 import static com.digitaltouchlab.learntangale.MainActivity.ANIMALS;
 import static com.digitaltouchlab.learntangale.MainActivity.BASICS;
+import static com.digitaltouchlab.learntangale.MainActivity.CLIMATE_WEATHER;
 import static com.digitaltouchlab.learntangale.MainActivity.COMMON_ACTIONS;
 import static com.digitaltouchlab.learntangale.MainActivity.FAMILY;
 import static com.digitaltouchlab.learntangale.MainActivity.FARM;
@@ -3891,6 +3892,185 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,BASICS);
         list.add(cv);
+
+
+        // weaher and climate
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Welei");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Spring");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wojon");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Dry season");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Rani");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kutho");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Hamattan");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Lokacin sanyi ");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kodi pidin wi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Hot season");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Lokacin Zafi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sene");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Rainy season");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Damina");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Tere");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Moon");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Wata");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Pissi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Sun");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Rana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Laliwin Tere");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Star");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Tauraro");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Lakwitong");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Sky");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Sararin sama");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Yogo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Wind");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Iska");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kalau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Dust");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kura");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kada");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Dust");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kura");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Pidin wi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "it's hot");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Akwai zafi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Pidin dul");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "it's cold");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Akwai sanyi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Pidin ka kada");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "it's cloudy");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Akwai hadari");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Pidin ka pissi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "it's cloudy");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Akwai zafin rana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Am na tiji");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "it's rainy");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Ina ruwan sama");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Andara");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "it's warm");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Akwai dumi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
+        list.add(cv);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
