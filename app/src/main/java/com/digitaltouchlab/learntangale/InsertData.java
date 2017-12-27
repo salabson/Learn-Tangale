@@ -19,6 +19,7 @@ import static com.digitaltouchlab.learntangale.MainActivity.GENERAL_WORDS;
 import static com.digitaltouchlab.learntangale.MainActivity.GREETINGS;
 import static com.digitaltouchlab.learntangale.MainActivity.HOME_OBJECTS;
 import static com.digitaltouchlab.learntangale.MainActivity.HUMAN_BODY;
+import static com.digitaltouchlab.learntangale.MainActivity.TIME_DATE;
 
 /**
  * Created by salabs on 23/07/2017.
@@ -4060,31 +4061,574 @@ public class InsertData {
         list.add(cv);
 
 
+        // time and season's data
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar dok");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "One O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe daya");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar rap");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Two O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe biyu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar kunun");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Three O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe uku");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar Padau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Four O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe Hudu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar Puwat");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Five O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe biyar");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar Payindi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Six O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe shida");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar peleuw");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "One O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe bakwai");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar Parpada");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Seven O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe takwas");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar Lambuda");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Nine O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe tara");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar komo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ten O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe goma");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar komo ka salai dok");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Eleven O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe daya");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar komo ka salai rap");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Twelve O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe daya");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu dok");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "One day");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana daya");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu rap");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Two days");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana biyu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu kunun");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Three days");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana uku");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu padau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Four days");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana hudu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu puwat");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Five days");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana biyar");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu payindi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Six days");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana shida");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu peleuw");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Seven days");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana bakwai");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu parpada");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Eight days");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana takwas");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu lambuda");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Nine months");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Wata goma");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu komo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ten days");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana goma");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
 
 
 
 
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter dok");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "One month");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Wata daya");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter rap");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Two months");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"wata biyu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter kunun");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Three months");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"wata uku");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter padau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Four months");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"wata hudu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter puwat");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Five months");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana biyar");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter payindi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Six months");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"wata shida");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter peleuw");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Seven months");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana bakwai");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter parpada");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Eight months");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Wata takwas");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter lambuda");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Nine months");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Wata Tara");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter komo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ten months");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana goma");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
 
 
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor dok");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "One year");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara daya");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor rap");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Two yeas");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara biyu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor kunun");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Three years");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara uku");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor padau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Four years");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara hudu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor puwat");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Five years");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara biyar");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor payindi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Six years");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara shida");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor peleuw");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Seven years");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara bakwai");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor parpada");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Eight years");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara takwas");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor lambuda");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Nine years");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara tara");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor komo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ten years");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara goma");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Teme");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Today");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Yau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Doji");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Tommorow");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Yau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wono");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Yesterday");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Gobe");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Tinu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Next tommorow");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Jibi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Yi shin");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Day before yestaday");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekaran diya");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Milgo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Long time ago");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Dadadewa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Mammo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Now");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Yanzu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kakko/Kaknu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Later");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Anjima");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Banu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ealier");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"dazu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Mam mommo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Recently");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwanannan/Ba dadadewa ba");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
 
 
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wantom Peleum Kubgo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Last week");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Satin da ya wuce");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"wantom Peleum mo watu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Next week");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Satin mai zuwa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"wantom Peleum mo watu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Next week");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Satin mai zuwa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Terem kubgo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Last Month");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Watan daya wuce");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Terem mo wattu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Next month");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Wata mai zuwa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Milyishin/Sor kubgo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Last year");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara mai zuwa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Milandoji/Sor mo wattu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Last year");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara mai zuwa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor lara");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "New year");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Sabon shekara");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
-
-
-
-
-
-
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Lai yesu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Chrismas");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kiristimaiti");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
+        list.add(cv);
 
 
 
