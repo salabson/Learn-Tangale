@@ -3468,7 +3468,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"TN");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Na");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Me");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Ni");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -3504,7 +3504,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Mom munu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Mo munu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "These");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"wadannan");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -3522,7 +3522,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kakwinu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kakwiwu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Themselve");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kansu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -3550,7 +3550,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kakino");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Na ka kino");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Myself");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kanina");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -3668,7 +3668,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wawayin");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wawayim");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Nothing");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Babu komai");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -3677,7 +3677,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kananung");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nung-nung");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Everyone");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kowa");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -3754,7 +3754,7 @@ public class InsertData {
 
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Massi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Mwassi");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Almost");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kusa");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
