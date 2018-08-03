@@ -154,8 +154,8 @@ public class InsertData {
         List<ContentValues> list = new ArrayList<ContentValues>();
 
         ContentValues cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Pig");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Yonge");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Yonge");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Pig");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Alade");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_pig);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
@@ -499,8 +499,8 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Mosquito");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Sokjok/pothos");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sokjok/pothos");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Mosquito");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kadangare");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_mosquito);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
@@ -571,8 +571,8 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Cat");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Kaltha");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kaltha");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Cat");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kule");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_cat);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
@@ -1209,7 +1209,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Gahin baki");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_moustache);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,8);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,HUMAN_BODY);
         list.add(cv);
 
 
@@ -1366,7 +1366,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Miya");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, -1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,COMMON_ACTIONS);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,GENERAL_WORDS);
         list.add(cv);
 
         cv = new ContentValues();
@@ -1904,7 +1904,7 @@ public class InsertData {
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Dik-dik");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Sweek");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Sweet");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Dadi");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, -1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
@@ -1966,14 +1966,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,GENERAL_WORDS);
         list.add(cv);
 
-        cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Inji tong");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Air plane");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"dalla-dalla");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, -1);
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,GENERAL_WORDS);
-        list.add(cv);
+
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Korok");
@@ -2048,15 +2041,6 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Alatene/Tene");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Pestle/Mortar");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, -1);
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,GENERAL_WORDS);
-        list.add(cv);
-
-        cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kada");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Skin");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Fata");
@@ -2123,26 +2107,26 @@ public class InsertData {
 
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Toilet");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Bayan gida");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Lapimana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Lapimana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Toilet");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Bayan gida");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, -1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,GENERAL_WORDS);
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Blanket");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Wamkaiki");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Fata");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wamkaiki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Blanket");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Bargo");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, -1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,GENERAL_WORDS);
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Trap");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Poruk");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Poruk");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Trap");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Tarko");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, -1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
@@ -2592,14 +2576,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,COMMON_ACTIONS);
         list.add(cv);
 
-        cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Yille");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "To lift)");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"daga/dauka");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, -1);
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,COMMON_ACTIONS);
-        list.add(cv);
+
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Yille");
@@ -3036,7 +3013,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanbenwa");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Wrapper");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Zani");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_firewood);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_wrapper);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,HOME_OBJECTS);
         list.add(cv);
@@ -3126,7 +3103,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Pobuga");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Window");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Taga");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_firewood);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_window);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,HOME_OBJECTS);
         list.add(cv);
@@ -3141,8 +3118,8 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Bedroom");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Laman wantho");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Laman wantho");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Bedroom");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Dakin Kwana");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_bedroom);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
@@ -3217,7 +3194,7 @@ public class InsertData {
         // farm
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Lamn wutho");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Farm");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Farmer");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Manomi");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID, R.drawable.ic_farmer);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
@@ -3700,8 +3677,8 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Everyone");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Kananung");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kananung");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Everyone");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kowa");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
@@ -3997,8 +3974,8 @@ public class InsertData {
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kada");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Dust");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kura");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Cloud");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Hardari");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
@@ -4119,7 +4096,7 @@ public class InsertData {
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar peleuw");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "One O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Seven O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe bakwai");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
@@ -4129,7 +4106,7 @@ public class InsertData {
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar Parpada");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Seven O'clock");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Eight O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe takwas");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
@@ -4374,7 +4351,7 @@ public class InsertData {
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor rap");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Two yeas");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Two years");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara biyu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
@@ -4567,14 +4544,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
         list.add(cv);
 
-        cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"wantom Peleum mo watu");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Next week");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Satin mai zuwa");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
-        list.add(cv);
+
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Terem kubgo");
@@ -4597,7 +4567,7 @@ public class InsertData {
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Milyishin/Sor kubgo");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Last year");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara mai zuwa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekaran da ya wuce");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
@@ -4605,7 +4575,7 @@ public class InsertData {
 
         cv = new ContentValues();
         cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Milandoji/Sor mo wattu");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Last year");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Next year");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara mai zuwa");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");

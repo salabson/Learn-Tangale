@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import static com.digitaltouchlab.learntangale.MainActivity.CLIMATE_WEATHER;
+
 public class WeatherActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
 
     ExpandableListView expLV;
@@ -58,7 +60,7 @@ public class WeatherActivity extends AppCompatActivity implements SharedPreferen
 
         // call method that populate parent and child data
         mDbUtils.Open();
-        Cursor cursor = mDbUtils.getWordsByCategory(1);
+        Cursor cursor = mDbUtils.getWordsByCategory(CLIMATE_WEATHER);
         LoadData.fillData(parentData, childData, cursor);
 
         // create custom adapter object and set expandable list view to it
@@ -119,7 +121,7 @@ public class WeatherActivity extends AppCompatActivity implements SharedPreferen
         PreferenceManager.getDefaultSharedPreferences(this)
                 .registerOnSharedPreferenceChangeListener(this);
         mDbUtils.Open();
-        Cursor cursor = mDbUtils.getWordsByCategory(1);
+        Cursor cursor = mDbUtils.getWordsByCategory(CLIMATE_WEATHER);
         parentData = new ArrayList<>();
         childData = new HashMap<>();
         LoadData.fillData(parentData, childData, cursor);
