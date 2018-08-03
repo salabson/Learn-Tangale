@@ -4027,11 +4027,11 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
         list.add(cv);
 
-        
+
 
         // time and season's data
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar dok");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awur dok");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "One O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe daya");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4040,7 +4040,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar rap");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awur rap");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Two O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe biyu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4049,7 +4049,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar kunun");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awur kunung");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Three O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe uku");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4058,7 +4058,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar Padau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awur Padawu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Four O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe Hudu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4067,7 +4067,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar Puwat");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awur Puwad");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Five O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe biyar");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4077,7 +4077,7 @@ public class InsertData {
 
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar Payindi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awur Payindi");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Six O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe shida");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4086,7 +4086,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar peleuw");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awur pelewu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Seven O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe bakwai");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4096,7 +4096,7 @@ public class InsertData {
 
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar Parpada");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awur Parpada");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Eight O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe takwas");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4105,7 +4105,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar Lambuda");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awur Lambuda");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Nine O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe tara");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4114,7 +4114,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar komo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar gbomo");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ten O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe goma");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4124,7 +4124,7 @@ public class InsertData {
 
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar komo ka salai dok");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awur gbomo ka salai dok");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Eleven O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe daya");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4133,7 +4133,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awar komo ka salai rap");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Awur gbomo ka salai rap");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Twelve O'clock");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Karfe daya");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4160,7 +4160,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu kunun");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu kunung");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Three days");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana uku");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4169,7 +4169,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu padau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu padawu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Four days");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana hudu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4178,7 +4178,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu puwat");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu puwad");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Five days");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana biyar");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4225,7 +4225,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu komo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wanthu gbomo");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ten days");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana goma");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4256,7 +4256,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter kunun");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter kunung");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Three months");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"wata uku");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4265,7 +4265,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter padau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter padawu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Four months");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"wata hudu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4274,7 +4274,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter puwat");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter puwad");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Five months");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana biyar");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4293,7 +4293,7 @@ public class InsertData {
 
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter peleuw");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter pelewu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Seven months");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana bakwai");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4321,7 +4321,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter komo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ter gbomo");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ten months");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kwana goma");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4350,7 +4350,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor kunun");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor kunung");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Three years");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara uku");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4359,7 +4359,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor padau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor padawu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Four years");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara hudu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4368,7 +4368,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor puwat");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor puwad");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Five years");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara biyar");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4387,7 +4387,7 @@ public class InsertData {
 
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor peleuw");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor pelewu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Seven years");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara bakwai");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4415,7 +4415,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor komo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sor gbomo");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Ten years");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shekara goma");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
