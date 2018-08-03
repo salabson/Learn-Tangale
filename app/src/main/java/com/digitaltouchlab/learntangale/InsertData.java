@@ -3964,7 +3964,7 @@ public class InsertData {
         list.add(cv);
 
         cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kalau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kalawu");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Dust");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Kura");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
@@ -4027,16 +4027,7 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
         list.add(cv);
 
-
-        cv = new ContentValues();
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Andara");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "it's warm");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Akwai dumi");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
-        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,CLIMATE_WEATHER);
-        list.add(cv);
-
+        
 
         // time and season's data
         cv = new ContentValues();
