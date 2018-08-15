@@ -19,6 +19,7 @@ import static com.digitaltouchlab.learntangale.MainActivity.GENERAL_WORDS;
 import static com.digitaltouchlab.learntangale.MainActivity.GREETINGS;
 import static com.digitaltouchlab.learntangale.MainActivity.HOME_OBJECTS;
 import static com.digitaltouchlab.learntangale.MainActivity.HUMAN_BODY;
+import static com.digitaltouchlab.learntangale.MainActivity.PHRASES;
 import static com.digitaltouchlab.learntangale.MainActivity.TIME_DATE;
 
 /**
@@ -4590,6 +4591,450 @@ public class InsertData {
         cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
         cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID,TIME_DATE);
         list.add(cv);
+
+
+    // General conversion data
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ku tak nerri?");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Do you understand?");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA,"Shin ka fahimta?");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nu tak nerim");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "I don't understand");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ban gane ba");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nu tak neri");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "I understand");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Na gane");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nu pengom");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "I don't know");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ban sani ba");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+       
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nu Lekkom");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "I don't like it");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ba na son shi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nu Lekko");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "I like it");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ina son shi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Ka dum neji Po-Tangle");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Can you speak Tangale");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Za ka iya magana a harshen Tangale?");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wa wayim");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "No problem");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Babu matsala");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wokku no wamballa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Please help me with your pen");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ka taimake ni da alkalami");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Na wan pidin seuwa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "I am going to school");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Zan je makaranta");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nku montu ikkum");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Don't forget");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Kar ka manta");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nu montuk sumgo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "I forget your name");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Na manta sunanka");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Na wannu lumo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "I am going to market");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Zan je kasuwa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Watto");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Please come");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Zo mana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nu lekkon san sana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "I want to eat");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ina so in ci abinci");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sin Lawom kong");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, " You are a good girl");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Kai yarinyan kirki ne");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nang lessin");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Kai yarinyan kirki ne");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ina so in ci abinci");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Watto ku sebi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Come and see");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "zo ka gani");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Mini wammu ma wobo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "We are going to church");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Zamu je coci");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nkong");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "It is good");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Yana da kyau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nang na wado");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "I am coming");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ina zuwa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Watto min sa sana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "come let's eat food");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Zo mu ci abinci");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Monthu pidmo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Go away from here");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ka tafi daga nan");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"An ku wakkom");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Don't go away");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Kada ka tafi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Yila ka kina");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "Yila has money");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Yila yana da kuɗi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Koddi ken ya go");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH, "it is time to go to bed");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Lokaci ne don konciya");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Min wad ya kollo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"Let us go and dance");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Bari mu je mu rawa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nang kuman mum");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"I am hungry");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ina jin yunwa");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Patanon sitha");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"Please buy pepper for me");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Da fatan a saya mani barkono");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nang ne kuman yid wantho");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"I am feeling sleepy");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ina jin barci");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Wonthon amum dul");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"Please bring give cool water");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "A kawo ruwa mai sanyi");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nu sak wan sana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"I have eaten");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Na ci abinci");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nu sak wan sana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"I have eaten");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Na ci abinci");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Kan ser ponno");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"You are my good friend");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Kai abokina ne mai kyau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Watto min ya teppida");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"come let's talk");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "zo bari mu magana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nan ka wan sana");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"I have food");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ina da abinci");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nu lekkon pat salang dom no");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"I want to sell my bag of beans");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ina so in sayar da buhu wake na");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Min simbe ta sum");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"come meet me tonight");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Mu sadu da dare");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Na yajin wannu mwammo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"I am going now");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Zan tafi yanzu");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Innon waiji teme");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"Today I am happy");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "A yau ina farin ciki");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Sin kumyo kwilli");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"You are very beautiful");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Kina da kyau sosai");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Nu lek mango");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"I like your house");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ina son gidan ka");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Na tawen wokku-wokke");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"I need your help");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "Ina bukatan taimako");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Lanthugon kong");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"Your clothes are nice");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "tufafin ka suna da kyau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Bejungo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"I am surprise");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "tufafin ka suna da kyau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+        cv = new ContentValues();
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_TANGALE,"Lanthugo");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_ENGLISH,"Your clothes are nice");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_HAUSA, "tufafin ka suna da kyau");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IMAGE_ID,-1);
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_IS_ADDED_TO_FAVORITE, "false");
+        cv.put(LearnTangaleContract.WordEntry.COLUMN_CATEGORY_ID, PHRASES);
+        list.add(cv);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
